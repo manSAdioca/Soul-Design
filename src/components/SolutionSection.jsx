@@ -127,7 +127,7 @@ const SolutionSection = () => {
                       key={`${project.id}-${i}`}
                       src={project.desktop} 
                       alt={project.name} 
-                      className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'}`}
+                      className={`absolute inset-0 w-full h-full object-contain object-center transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'}`}
                     />
                   ))}
                   
