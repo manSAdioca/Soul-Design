@@ -234,7 +234,6 @@ export default function Hero() {
             
 
           </div>
-          </div>
         </div>
 
         {/* Camada 5 & 6: Coluna da Direita (Mockups & Flutuantes) */}
