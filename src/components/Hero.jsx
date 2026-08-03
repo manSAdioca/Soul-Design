@@ -82,14 +82,15 @@ export default function Hero() {
           ctx.lineCap = 'round';
           
           // Glow muito sutil (para não virar neon)
-          ctx.shadowBlur = 4;
-          ctx.shadowColor = `rgba(${this.color}, 0.5)`;
+          // ctx.shadowBlur = 4; // REMOVIDO: Causa extremo lag em celulares
+          // ctx.shadowColor = `rgba(${this.color}, 0.5)`;
           
           ctx.stroke();
         }
       }
 
-      for (let i = 0; i < 150; i++) { // Mais faíscas para um visual mais denso
+      const particleCount = window.innerWidth < 768 ? 50 : 150; // Menos faíscas no celular para salvar bateria e CPU
+      for (let i = 0; i < particleCount; i++) { 
         particles.push(new Particle());
       }
 
