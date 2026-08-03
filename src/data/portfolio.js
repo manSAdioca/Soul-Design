@@ -19,3 +19,13 @@ export const projects = [
   { id: 8, desktop: p8, name: "Projeto 8" },
   { id: 9, desktop: p9, name: "Projeto 9" }
 ];
+
+export const getProjects = (niche) => {
+  if (niche === 'distribuidoras') {
+    return [
+      { id: 'd1', desktop: '/assets/distribuidora-catalogo.png', name: "Catálogo B2B e B2C Imperatriz" },
+      { id: 'd2', desktop: '/assets/distribuidora-dashboard.png', name: "Dashboard de Gestão e Operações" }
+    ];
+  }
+  return projects;
+};

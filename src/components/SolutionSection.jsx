@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { projects } from '@/data/portfolio';
+import { getProjects } from '@/data/portfolio';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,11 @@ const SolutionSection = () => {
   const [current, setCurrent] = useState(0);
   const autoPlayRef = useRef(null);
 
-  const nextSlide = () => setCurrent((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+  // Pega os projetos do nicho atual
+  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  const activeProjects = getProjects(currentNiche);
+
+  const nextSlide = () => setCurrent((prev) => (prev === activeProjects.length - 1 ? 0 : prev + 1));
 
   // Auto-play logic
   useEffect(() => {
@@ -121,7 +125,7 @@ const SolutionSection = () => {
                 <div className="w-full bg-[#050505] relative overflow-hidden border-b border-[#222]">
                   
                   {/* Imagens do Carrossel */}
-                  {projects.map((project, i) => (
+                  {activeProjects.map((project, i) => (
                     <img 
                       loading="lazy"
                       key={`${project.id}-${i}`}
