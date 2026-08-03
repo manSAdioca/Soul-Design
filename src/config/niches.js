@@ -172,8 +172,8 @@ export const niches = {
     // Hero Section
     heroImage: "/assets/hero-corretores.png",
     heroTitleLines: [
-      "Cansado de depender de listas de leads frios",
-      "e portais que engolem sua comissão?"
+      "Cansado de depender dos leads da imobiliária",
+      "e de portais que engolem sua comissão?"
     ],
     heroHighlight: "Capture os seus.",
     heroSubhead: "Tenha um site profissional que transmite autoridade imediata e capta leads qualificados diretamente para o seu WhatsApp.",
