@@ -20,18 +20,7 @@ const MagneticCard = ({ title, description, icon }) => {
     const x = e.clientX - left;
     const y = e.clientY - top;
     
-    // Rotação 3D sutil (-10 a +10 graus)
-    const rotateX = -((y / height) - 0.5) * 20; 
-    const rotateY = ((x / width) - 0.5) * 20;
-
-    gsap.to(card, {
-      rotateX,
-      rotateY,
-      duration: 0.6,
-      ease: 'power3.out',
-      transformPerspective: 1000,
-      transformOrigin: 'center center'
-    });
+    // Rotação removida a pedido do usuário (cartão estático)
 
     // Mover o Glare Interno suavemente
     gsap.to(glowRef.current, {
@@ -44,13 +33,7 @@ const MagneticCard = ({ title, description, icon }) => {
   };
 
   const handleMouseLeave = () => {
-    // Retornar ao estado original com efeito elástico
-    gsap.to(cardRef.current, {
-      rotateX: 0,
-      rotateY: 0,
-      duration: 1.2,
-      ease: 'elastic.out(1, 0.4)',
-    });
+    // Retorno de rotação removido
     
     gsap.to(glowRef.current, {
       opacity: 0,

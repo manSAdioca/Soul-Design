@@ -164,25 +164,7 @@ export default function Hero() {
     }
   }, []);
 
-  // Parallax Effect Separado (Segurança de Memória)
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!textColRef.current || window.innerWidth < 1024) return;
-      const { clientX, clientY } = e;
-      const xPos = (clientX / window.innerWidth - 0.5) * 30;
-      const yPos = (clientY / window.innerHeight - 0.5) * 30;
-      
-      gsap.to(textColRef.current, {
-        x: xPos,
-        y: yPos,
-        duration: 1.5,
-        ease: 'power2.out'
-      });
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  // Parallax Effect Separado removido a pedido do usuário (texto estático)
 
   return (
     <section
@@ -271,13 +253,13 @@ export default function Hero() {
                   trackConversion('hero_cta');
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto relative flex items-center justify-center gap-3 px-10 py-5 rounded-[20px] bg-gradient-to-b from-[#25D366] to-[#1DA851] text-white text-lg font-bold shadow-[0_8px_30px_rgba(37,211,102,0.25)] hover:shadow-[0_15px_40px_rgba(37,211,102,0.4)] border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden z-10 animate-[button-pulse_2s_ease-in-out_infinite] hover:animate-none hover:-translate-y-0.5"
+                className="w-full sm:w-auto relative flex items-center justify-center gap-3 px-10 py-5 rounded-[20px] bg-gradient-to-b from-[#25D366] to-[#1DA851] text-white text-lg font-bold shadow-[0_8px_30px_rgba(37,211,102,0.25)] hover:shadow-[0_15px_40px_rgba(37,211,102,0.4)] border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden z-10 animate-[button-pulse_2s_ease-in-out_infinite] hover:animate-none"
               >
                 {/* Brilho passando lentamente no hover (Shine effect) */}
                 <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:animate-[shine_1.5s_ease-in-out_infinite] z-20 pointer-events-none" />
                 
                 <span className="relative z-10">{nicheData.heroButton}</span>
-                <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 relative z-10 transition-transform duration-300" />
                 {/* Glow interno (Inner shadow sutil) */}
                 <div className="absolute inset-0 rounded-[20px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] pointer-events-none" />
               </button>
@@ -296,7 +278,7 @@ export default function Hero() {
               {/* Notebook Mockup */}
               <div 
                 onClick={() => setIsNotebookClicked(!isNotebookClicked)}
-                className="absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[432px] rotate-[-5deg] rotateX-[4deg] rotateY-[-12deg] shadow-[0_30px_60px_rgba(0,0,0,0.6)] rounded-2xl bg-[#0a0a0a] border border-white/5 overflow-hidden transform-gpu transition-all duration-700 hover:rotate-[-3deg] hover:rotateY-[-8deg] cursor-pointer group z-10"
+                className="absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[432px] rotate-[-5deg] rotateX-[4deg] rotateY-[-12deg] shadow-[0_30px_60px_rgba(0,0,0,0.6)] rounded-2xl bg-[#0a0a0a] border border-white/5 overflow-hidden transform-gpu transition-all duration-700 cursor-pointer group z-10"
               >
                 <div className="h-8 bg-[#111] border-b border-white/5 flex items-center px-4 gap-2 relative z-10">
                   <div className="flex gap-1.5">
@@ -323,7 +305,7 @@ export default function Hero() {
               </div>
 
               {/* Smartphone Mockup */}
-              <div className="absolute left-[-2%] bottom-12 w-[32%] h-[400px] rotate-[6deg] rotateY-[12deg] shadow-[0_20px_50px_rgba(0,0,0,0.7)] rounded-[2.5rem] bg-[#050505] border-[5px] border-[#1a1a1a] p-1 overflow-hidden transform-gpu transition-all duration-700 hover:rotate-[4deg] hover:rotateY-[8deg] z-20">
+              <div className="absolute left-[-2%] bottom-12 w-[32%] h-[400px] rotate-[6deg] rotateY-[12deg] shadow-[0_20px_50px_rgba(0,0,0,0.7)] rounded-[2.5rem] bg-[#050505] border-[5px] border-[#1a1a1a] p-1 overflow-hidden transform-gpu transition-all duration-700 z-20">
                 <div className="absolute top-0 inset-x-0 h-4 bg-[#1a1a1a] rounded-b-xl w-[40%] mx-auto z-20" />
                 <div className="h-full w-full rounded-[1.75rem] bg-[#030303] border border-white/5 overflow-hidden relative">
                   <img 
