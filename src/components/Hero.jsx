@@ -194,10 +194,10 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 perspective-[1000px]"
           >
             {/* Animating word by word */}
-            <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">pode</span>&nbsp;<span className="word inline-block">não</span></span><br className="hidden lg:block" />
-            <span className="inline-block"><span className="word inline-block">ser</span>&nbsp;<span className="word inline-block">melhor</span>&nbsp;<span className="word inline-block">que</span>&nbsp;<span className="word inline-block">você.</span></span><br className="hidden lg:block" />
+            <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">conquista</span>&nbsp;<span className="word inline-block">clientes</span></span><br className="hidden lg:block" />
+            <span className="inline-block"><span className="word inline-block">antes</span>&nbsp;<span className="word inline-block">mesmo</span>&nbsp;<span className="word inline-block">de</span>&nbsp;<span className="word inline-block">falar</span>&nbsp;<span className="word inline-block">com</span>&nbsp;<span className="word inline-block">eles.</span></span><br className="hidden lg:block" />
             <span className="word inline-block bg-gradient-to-r from-[#FF6A00] to-[#ff984d] text-transparent bg-clip-text mt-2 drop-shadow-[0_0_30px_rgba(255,106,0,0.2)]">
-              Só parece ser.
+              Você também pode.
             </span>
           </h1>
 
@@ -205,7 +205,8 @@ export default function Hero() {
             ref={subheadRef}
             className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-[90%] lg:max-w-none tracking-wide"
           >
-            Muito além de uma <strong className="text-white font-medium">empresa de marketing</strong>. Criamos sites que fortalecem sua marca, transmitem autoridade e geram vendas diárias.
+            Seu site, sua identidade visual e sua presença digital são responsáveis pela primeira impressão que define se alguém compra de você ou procura outra empresa.<br/><br/>
+            Criamos experiências digitais que aumentam autoridade, confiança e conversão.
           </h2>
           
           <div ref={ctaRef} className="flex flex-col items-center lg:items-start gap-4 mb-14 w-full sm:w-auto relative">
