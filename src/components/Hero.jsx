@@ -209,7 +209,7 @@ export default function Hero() {
           
           <h1 
             ref={headlineRef}
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8 md:mb-10 perspective-[1200px] drop-shadow-[0_25px_35px_rgba(0,0,0,1)] [text-shadow:0_4px_10px_rgba(0,0,0,0.8),_0_1px_1px_rgba(255,255,255,0.1)]"
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8 md:mb-10 perspective-[1200px] [text-shadow:0_10px_20px_rgba(0,0,0,0.9),_0_2px_4px_rgba(255,255,255,0.1)]"
           >
             {/* Animating word by word */}
             <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">conquista</span>&nbsp;<span className="word inline-block">clientes</span></span><br className="hidden lg:block" />
