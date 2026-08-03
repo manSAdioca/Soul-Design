@@ -188,7 +188,7 @@ export default function Hero() {
           
           <h1 
             ref={headlineRef}
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 perspective-[1000px]"
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8 md:mb-10 perspective-[1000px]"
           >
             {/* Animating word by word */}
             <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">conquista</span>&nbsp;<span className="word inline-block">clientes</span></span><br className="hidden lg:block" />
@@ -200,7 +200,7 @@ export default function Hero() {
 
           <h2 
             ref={subheadRef}
-            className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-[90%] lg:max-w-none tracking-wide"
+            className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-16 md:mb-14 max-w-[90%] lg:max-w-none tracking-wide"
           >
             A primeira impressão decide quem conquista o cliente.<br className="hidden md:block"/> Criamos marcas e sites que aumentam confiança, autoridade e vendas.
           </h2>
