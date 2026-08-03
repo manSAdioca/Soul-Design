@@ -207,6 +207,33 @@ export default function Hero() {
         className="absolute inset-0 z-[3] pointer-events-none mix-blend-screen"
       />
 
+      {/* Camada 4.5: Cenário Gigante Distribuidoras (Full Bleed Right) */}
+      {currentNiche === 'distribuidoras' && (
+        <div className="absolute inset-y-0 right-0 w-[100vw] md:w-[65vw] z-[4] pointer-events-none overflow-hidden">
+          <div 
+            className="absolute inset-0"
+            style={{
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%), linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, transparent 100%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%), linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, transparent 100%)',
+              WebkitMaskComposite: 'source-in',
+              maskComposite: 'intersect'
+            }}
+          >
+            <img 
+              src="/assets/hero-distribuidora.png" 
+              alt="Dor do Distribuidor"
+              className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
+            />
+            
+            {/* Suaviza as bordas internas e escurece a imagem globalmente */}
+            <div className="absolute inset-0 bg-[#030303]/30" />
+            
+            {/* Brilho quente sutil de fogo para integrar à estética do site */}
+            <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#FF6A00]/15 blur-[150px] mix-blend-color-dodge" />
+          </div>
+        </div>
+      )}
+
       {/* Camada 5: Conteúdo Principal */}
       <div className="relative z-[10] w-full max-w-[85rem] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
         
@@ -264,41 +291,13 @@ export default function Hero() {
                 <div className="absolute inset-0 rounded-[20px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] pointer-events-none" />
               </button>
             </div>
-
-
           </div>
         </div>
 
-        {/* Camada 5 & 6: Coluna da Direita (Mockups ou Cenario) */}
+        {/* Camada 5 & 6: Coluna da Direita (Mockups) */}
         <div className="relative hidden lg:block h-[650px] flex items-center justify-center perspective-[2000px]">
           
-          {currentNiche === 'distribuidoras' ? (
-            <div ref={rightColRef} className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              
-              {/* Imagem do Cenário Gigante fixada na direita com Fade-out para a esquerda */}
-              <div 
-                className="absolute w-[160%] h-[120%] right-[-20%] top-[-10%] z-0"
-                style={{
-                  WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)',
-                  maskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)'
-                }}
-              >
-                <img 
-                  src="/assets/hero-distribuidora.png" 
-                  alt="Dor do Distribuidor"
-                  className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
-                />
-                
-                {/* Suaviza as bordas internas e escurece a imagem globalmente */}
-                <div className="absolute inset-0 bg-[#030303]/30" />
-                
-                {/* Brilho quente sutil de fogo para integrar à estética do site */}
-                <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[60%] h-[80%] bg-[#FF6A00]/20 blur-[150px] mix-blend-color-dodge" />
-              </div>
-              
-            </div>
-
-          ) : (
+          {currentNiche === 'default' && (
             <div ref={rightColRef} className="absolute inset-0">
               {/* Glow indireto atrás do notebook */}
               <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#FF6A00]/10 blur-[100px] rounded-full z-0" />
@@ -346,9 +345,9 @@ export default function Hero() {
             </div>
           )}
 
-
         </div>
       </div>
     </section>
   );
 }
+
