@@ -10,7 +10,16 @@ const TestimonialSection = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
-  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  let currentNiche = 'default';
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname.includes('corretores')) {
+      currentNiche = 'corretores';
+    } else if (window.location.hostname.includes('distribuidoras')) {
+      currentNiche = 'distribuidoras';
+    } else if (window.NICHE) {
+      currentNiche = window.NICHE;
+    }
+  }
   const nicheData = niches[currentNiche] || niches.default;
   const { r1: row1, r2: row2 } = getTestimonials(currentNiche);
 

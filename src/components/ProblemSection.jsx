@@ -221,7 +221,16 @@ const ProblemSection = () => {
     return () => cleanups.forEach(cleanup => cleanup());
   }, []);
 
-  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  let currentNiche = 'default';
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname.includes('corretores')) {
+      currentNiche = 'corretores';
+    } else if (window.location.hostname.includes('distribuidoras')) {
+      currentNiche = 'distribuidoras';
+    } else if (window.NICHE) {
+      currentNiche = window.NICHE;
+    }
+  }
   
   // Roteamento condicional de Componente: Se for Distribuidora, carrega o Bento Grid Agressivo
   if (currentNiche === 'distribuidoras') {

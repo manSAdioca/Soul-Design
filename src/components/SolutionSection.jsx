@@ -49,7 +49,16 @@ const SolutionSection = () => {
   const autoPlayRef = useRef(null);
 
   // Pega os projetos do nicho atual
-  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  let currentNiche = 'default';
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname.includes('corretores')) {
+      currentNiche = 'corretores';
+    } else if (window.location.hostname.includes('distribuidoras')) {
+      currentNiche = 'distribuidoras';
+    } else if (window.NICHE) {
+      currentNiche = window.NICHE;
+    }
+  }
   const activeProjects = getProjects(currentNiche);
 
   const nextSlide = () => setCurrent((prev) => (prev === activeProjects.length - 1 ? 0 : prev + 1));

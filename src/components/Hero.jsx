@@ -17,8 +17,17 @@ export default function Hero() {
   const rightColRef = useRef(null);
   const textColRef = useRef(null);
 
-  // Carregar dados baseados na variável injetada pelo SSG ou fallback pro default
-  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  // Carregar dados baseados na URL (fallback de segurança) ou variável injetada
+  let currentNiche = 'default';
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname.includes('corretores')) {
+      currentNiche = 'corretores';
+    } else if (window.location.hostname.includes('distribuidoras')) {
+      currentNiche = 'distribuidoras';
+    } else if (window.NICHE) {
+      currentNiche = window.NICHE;
+    }
+  }
   const nicheData = niches[currentNiche] || niches.default;
 
   useEffect(() => {
