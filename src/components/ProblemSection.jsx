@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { niches } from '@/config/niches';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,9 +80,8 @@ const MagneticCard = ({ title, description, icon }) => {
         <div 
           className="relative z-10 w-12 h-12 flex items-center justify-center rounded-xl bg-[#111] border border-white/5 mb-6 shadow-inner group-hover:border-[#FF6A00]/40 transition-colors duration-500"
           style={{ transform: 'translateZ(30px)' }}
-        >
-          {icon}
-        </div>
+          dangerouslySetInnerHTML={{ __html: icon }}
+        />
 
         {/* Textos com Parallax Sutil */}
         <div style={{ transform: 'translateZ(20px)' }} className="relative z-10">
@@ -217,102 +218,10 @@ const ProblemSection = () => {
     return () => cleanups.forEach(cleanup => cleanup());
   }, []);
 
-  const problems = [
-    {
-      title: "Primeira Impressão Fraca",
-      description: "O visitante decide se confia na sua empresa em menos de 3 segundos. Um layout ultrapassado destrói sua credibilidade antes mesmo do seu discurso de vendas.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
-      )
-    },
-    {
-      title: "Guerra de Preços",
-      description: "Sem autoridade visual, você é nivelado por baixo. O cliente não percebe o valor real do seu serviço e começa a te comparar apenas por quem cobra mais barato.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-        </svg>
-      )
-    },
-    {
-      title: "Dinheiro Queimado",
-      description: "Você investe em tráfego pago (Google/Meta), mas o visitante clica, se decepciona com o design e vai para o concorrente. É orçamento rasgado todos os dias.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-        </svg>
-      )
-    },
-    {
-      title: "Velocidade de Tartaruga",
-      description: "Seu site demora para carregar e o cliente fecha a aba antes mesmo de ver o que você faz. Cada segundo de lentidão é dinheiro entregue de bandeja para a concorrência.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      )
-    },
-    {
-      title: "Design Genérico",
-      description: "Você usa os mesmos templates básicos que seus concorrentes menores. Nada te destaca como líder de mercado ou justifica cobrar o preço que seu serviço realmente vale.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-        </svg>
-      )
-    },
-    {
-      title: "Mensagem Confusa",
-      description: "O visitante entra, lê seus textos e não entende imediatamente o que você resolve. Jargões difíceis e falta de clareza matam o desejo de compra na hora.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      )
-    }
-  ];
-
-  const solutions = [
-    {
-      title: "Landing Pages de Alta Conversão",
-      description: "Páginas focadas em um único objetivo: transformar visitantes em leads quentes ou vendas diretas com copy persuasiva e design estratégico.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
-    },
-    {
-      title: "Sites Institucionais",
-      description: "A vitrine digital perfeita para sua empresa. Apresente seus serviços, transmita autoridade e gere confiança logo no primeiro clique.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      )
-    },
-    {
-      title: "E-commerces Premium",
-      description: "Lojas virtuais desenhadas para vender 24/7. Checkout otimizado, navegação fluida e design que valoriza o seu produto.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      )
-    },
-    {
-      title: "Sistemas e Dashboards",
-      description: "Soluções robustas sob medida. De painéis administrativos a plataformas completas, construímos a tecnologia do seu negócio.",
-      icon: (
-        <svg className="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path className="draw-path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      )
-    }
-  ];
+  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  const nicheData = niches[currentNiche] || niches.default;
+  const problems = nicheData.problems;
+  const solutions = nicheData.solutions;
 
   return (
     <section ref={sectionRef} className="relative w-full bg-[#030303] py-32 lg:py-48 overflow-hidden z-10">
@@ -332,11 +241,11 @@ const ProblemSection = () => {
 
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8">
-            Quantos clientes excelentes você perdeu hoje porque seu site parece amador?
+            {nicheData.problemsTitle}
           </h2>
           
           <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed max-w-3xl mt-4">
-            Seu site deveria ser sua melhor e mais incansável ferramenta de vendas, não o principal motivo de você perder autoridade no mercado.
+            {nicheData.problemsSubhead}
           </p>
         </div>
 
@@ -347,7 +256,7 @@ const ProblemSection = () => {
               key={index}
               title={problem.title}
               description={problem.description}
-              icon={problem.icon}
+              icon={problem.iconSvg}
             />
           ))}
         </div>
@@ -370,8 +279,8 @@ const ProblemSection = () => {
             <div className="w-8 h-[1px] bg-[#FF6A00]/50" />
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight">
-            O que nós construímos <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] to-[#ffaa66]">para o seu negócio</span>
+            {nicheData.solutionsTitle} <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] to-[#ffaa66]">{nicheData.solutionsTitleHighlight}</span>
           </h2>
         </div>
 
@@ -382,7 +291,7 @@ const ProblemSection = () => {
               key={index}
               title={solution.title}
               description={solution.description}
-              icon={solution.icon}
+              icon={solution.iconSvg}
             />
           ))}
         </div>
