@@ -5,7 +5,6 @@ import {
   ProblemSection,
   SolutionSection,
   TestimonialSection,
-  IntegrationSection,
   ContactSection,
   Footer
 } from '@/components'
@@ -20,7 +19,7 @@ function App() {
       <Marquee />
       <ProblemSection />
       <SolutionSection />
-      {currentNiche === 'distribuidoras' ? <IntegrationSection /> : <TestimonialSection />}
+      <TestimonialSection />
       <ContactSection />
       <Footer />
     </main>

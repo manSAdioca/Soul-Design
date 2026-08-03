@@ -3,11 +3,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-import { row1, row2 } from '@/data/testimonials';
+import { getTestimonials } from '@/data/testimonials';
 import { TestimonialCard } from './ui/TestimonialCard';
 const TestimonialSection = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
+
+  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  const { r1: row1, r2: row2 } = getTestimonials(currentNiche);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
