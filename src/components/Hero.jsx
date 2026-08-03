@@ -123,11 +123,11 @@ export default function Hero() {
 
         // Split headline text manually for word-by-word animation
         const words = headlineRef.current.querySelectorAll('.word');
-        gsap.set(words, { y: 20, opacity: 0, rotateX: 10, filter: "blur(10px)" });
+        gsap.set(words, { y: 30, opacity: 0, rotateX: 40, scale: 1.15, filter: "blur(15px)" });
 
-        // Sequência de entrada com Blur Cinematográfico
+        // Sequência de entrada com Blur Cinematográfico (Efeito 3D Pop)
         tl.to(words, {
-          y: 0, opacity: 1, rotateX: 0, filter: "blur(0px)", duration: 1.2, stagger: 0.05, ease: 'power3.out'
+          y: 0, opacity: 1, rotateX: 0, scale: 1, filter: "blur(0px)", duration: 1.2, stagger: 0.05, ease: 'back.out(1.4)'
         })
         .to(subheadRef.current, {
           y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: 'power3.out'
@@ -182,7 +182,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20 md:pt-24 pb-10 md:pb-12 bg-[#030303] selection:bg-[#FF6A00]/30"
+      className="relative min-h-[90vh] lg:min-h-[85vh] flex flex-col justify-center overflow-hidden pt-20 md:pt-24 pb-0 bg-[#030303] selection:bg-[#FF6A00]/30"
     >
       {/* Camada 1: Background Fixo Fumaça/Fogo */}
       
@@ -209,7 +209,7 @@ export default function Hero() {
           
           <h1 
             ref={headlineRef}
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8 md:mb-10 perspective-[1000px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.9)]"
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8 md:mb-10 perspective-[1200px] drop-shadow-[0_25px_35px_rgba(0,0,0,1)] [text-shadow:0_4px_10px_rgba(0,0,0,0.8),_0_1px_1px_rgba(255,255,255,0.1)]"
           >
             {/* Animating word by word */}
             <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">conquista</span>&nbsp;<span className="word inline-block">clientes</span></span><br className="hidden lg:block" />
