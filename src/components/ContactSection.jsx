@@ -7,7 +7,7 @@ import { trackConversion } from '@/utils/analytics';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ContactSection = () => {
+const ContactSection = ({ niche = 'default' }) => {
   const sectionRef = useRef(null);
   const leftRef = useRef(null);
   const rightRef = useRef(null);
@@ -35,6 +35,7 @@ const ContactSection = () => {
         name: name,
         phone: phone,
         email: email,
+        origem: niche,
       },
       'af8fsz3hVjcJCBrSJ' // Public Key
     ).then((response) => {
@@ -43,7 +44,7 @@ const ContactSection = () => {
       console.error('Falha ao enviar e-mail...', err);
     });
     
-    const text = `Olá! Acabei de preencher o formulário no site e gostaria de iniciar meu atendimento.`;
+    const text = `Olá! Acabei de preencher o formulário no site e gostaria de iniciar meu atendimento. (Origem: ${niche})`;
     const link = `https://wa.me/5547992419566?text=${encodeURIComponent(text)}`;
     setWhatsappLink(link);
     

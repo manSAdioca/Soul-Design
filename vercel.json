@@ -5,6 +5,16 @@
       "has": [
         {
           "type": "host",
+          "value": "corretores.souldesign.com.br"
+        }
+      ],
+      "destination": "/corretores.html"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "distribuidoras.souldesign.com.br"
         }
       ],

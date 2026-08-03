@@ -20,7 +20,7 @@ function App() {
       <ProblemSection />
       <SolutionSection />
       <TestimonialSection />
-      <ContactSection />
+      <ContactSection niche={currentNiche} />
       <Footer />
     </main>
   )
