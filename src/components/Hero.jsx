@@ -269,26 +269,28 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Camada 5 & 6: Coluna da Direita (Mockups ou Imagem) */}
+        {/* Camada 5 & 6: Coluna da Direita (Mockups ou Cenario) */}
         <div className="relative hidden lg:block h-[650px] flex items-center justify-center perspective-[2000px]">
           
           {currentNiche === 'distribuidoras' ? (
-            <div ref={rightColRef} className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              {/* Glow forte atrás da imagem para mesclar com o fundo */}
-              <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-[#FF6A00]/15 blur-[120px] rounded-full z-0" />
+            <div ref={rightColRef} className="fixed lg:absolute top-0 right-0 w-[55vw] h-full pointer-events-none z-[-1] overflow-hidden">
               
-              {/* Imagem mesclada sem bordas */}
-              <div className="relative w-[130%] ml-20 z-10 transform-gpu rotate-y-[-15deg] rotate-x-[5deg] transition-transform duration-1000 ease-out">
-                <img 
-                  src="/assets/hero-distribuidora.png" 
-                  alt="Plataforma B2B Distribuidoras"
-                  className="w-full h-auto object-cover opacity-90 filter contrast-125"
-                  style={{
-                    WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%)',
-                    maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%)'
-                  }}
-                />
-              </div>
+              {/* Imagem do Cenário Gigante */}
+              <img 
+                src="/assets/hero-distribuidora.png" 
+                alt="Dor do Distribuidor"
+                className="absolute inset-0 w-full h-full object-cover object-right opacity-40 mix-blend-luminosity filter contrast-125"
+              />
+              
+              {/* Degradê vindo da Esquerda (Preto Sólido para Transparente) para mesclar a imagem ao fundo escuro */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/80 to-transparent" />
+              
+              {/* Degradê de Cima e de Baixo para suavizar as bordas verticais */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303]" />
+              
+              {/* Brilho quente sutil de fogo para integrar à estética do site */}
+              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full h-full bg-[#FF6A00]/10 blur-[150px] mix-blend-color-dodge" />
+              
             </div>
           ) : (
             <div ref={rightColRef} className="absolute inset-0">
