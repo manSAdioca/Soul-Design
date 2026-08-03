@@ -164,7 +164,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-12 md:pt-24 pb-20 bg-[#030303] selection:bg-[#FF6A00]/30"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20 md:pt-24 pb-20 bg-[#030303] selection:bg-[#FF6A00]/30"
     >
       {/* Camada 1: Background Fixo Fumaça/Fogo */}
       
@@ -191,7 +191,7 @@ export default function Hero() {
           
           <h1 
             ref={headlineRef}
-            className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 perspective-[1000px]"
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-6 perspective-[1000px]"
           >
             {/* Animating word by word */}
             <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">pode</span>&nbsp;<span className="word inline-block">não</span></span><br className="hidden lg:block" />
