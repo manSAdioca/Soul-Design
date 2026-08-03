@@ -166,8 +166,8 @@ export const niches = {
   },
   
   corretores: {
-    seoTitle: "Soul Design para Corretores | Venda Imóveis de Alto Padrão",
-    seoDescription: "Sites premium para corretores de imóveis e imobiliárias que desejam captar leads qualificados e vender imóveis de luxo.",
+    seoTitle: "Soul Design para Corretores | Venda Mais Imóveis",
+    seoDescription: "Sites de alta conversão para corretores de imóveis e imobiliárias que desejam captar leads qualificados todos os dias.",
     
     // Hero Section
     heroImage: "/assets/hero-corretores.png",
@@ -176,12 +176,12 @@ export const niches = {
       "e portais que engolem sua comissão?"
     ],
     heroHighlight: "Capture os seus.",
-    heroSubhead: "Tenha um site de alto padrão que transmite autoridade imediata e capta leads qualificados diretamente para o seu WhatsApp.",
+    heroSubhead: "Tenha um site profissional que transmite autoridade imediata e capta leads qualificados diretamente para o seu WhatsApp.",
     heroButton: "Quero captar leads exclusivos",
 
     // Problem Section
     problemsTitle: "Por que os melhores clientes compram com outro corretor?",
-    problemsSubhead: "Vender imóvel de luxo exige confiança extrema. Se o seu posicionamento digital não reflete o valor das propriedades, você vira só mais um na multidão.",
+    problemsSubhead: "Vender imóveis exige confiança extrema. Se o seu posicionamento digital não transmite profissionalismo, você vira só mais um na multidão.",
     problems: [
       {
         title: "Refém de Portais",
@@ -190,22 +190,22 @@ export const niches = {
       },
       {
         title: "Leads Desqualificados",
-        description: "Como sua presença online não filtra por qualidade, seu WhatsApp enche de curiosos sem potencial de compra de alto padrão, sugando sua energia.",
+        description: "Como sua presença online não filtra por qualidade, seu WhatsApp enche de curiosos sem potencial de compra real, sugando sua energia.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>`
       },
       {
         title: "Vitrine de 2010",
-        description: "Seu site atual é lento, feio e não funciona direito no celular. O cliente de alto padrão julga a qualidade da mansão pela qualidade da sua vitrine.",
+        description: "Seu site atual é lento, feio e não funciona direito no celular. O cliente julga a qualidade do imóvel pela qualidade da sua vitrine.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>`
       },
       {
         title: "Falta de Marca Pessoal",
-        description: "No alto padrão, pessoas compram de pessoas. Sem um site focado no SEU nome e na SUA autoridade, você é visto como um intermediário descartável.",
+        description: "No mercado imobiliário, pessoas compram de pessoas. Sem um site focado no SEU nome e na SUA autoridade, você é visto como um intermediário descartável.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>`
       },
       {
         title: "Imóveis Mal Apresentados",
-        description: "Fotos espremidas, vídeos que travam e falta de storytelling. Imóveis de 5 milhões não podem ser apresentados como se custassem 500 mil.",
+        description: "Fotos espremidas, vídeos que travam e falta de storytelling. Seus imóveis não podem ser apresentados de forma amadora se você quer lucrar mais.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`
       },
       {
@@ -215,7 +215,7 @@ export const niches = {
       }
     ],
     solutionsTitle: "Sua Nova Vitrine de",
-    solutionsTitleHighlight: "Imóveis Premium",
+    solutionsTitleHighlight: "Alta Conversão",
     solutions: [
       {
         title: "Páginas de Empreendimentos",
@@ -223,25 +223,25 @@ export const niches = {
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>`
       },
       {
-        title: "Catálogo Imersivo de Alto Padrão",
-        description: "Filtros inteligentes, fotos imersivas e vídeos fluidos. Mostre seus imóveis de luxo como uma verdadeira revista de arquitetura.",
+        title: "Catálogo Imersivo",
+        description: "Filtros inteligentes, fotos imersivas e vídeos fluidos. Mostre seus imóveis de forma profissional e encante o comprador.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>`
       },
       {
         title: "Posicionamento de Autoridade",
-        description: "Design elegante, tipografia premium e cores que transmitem a confiança e sofisticação que grandes investidores exigem.",
+        description: "Design elegante, tipografia moderna e cores que transmitem a confiança e sofisticação que todo comprador procura.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`
       },
       {
         title: "Captura de Leads Integrada",
-        description: "Botões de WhatsApp rastreados e formulários premium. Saiba exatamente de onde vem o cliente que compra e o que ele acessou.",
+        description: "Botões de WhatsApp rastreados e formulários otimizados. Saiba exatamente de onde vem o cliente que compra e o que ele acessou.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
       }
     ],
 
     // Testimonials Section
-    testimonialsTitle: "Corretores que já dominam o",
-    testimonialsHighlight: "Alto Padrão",
-    testimonialsSubhead: "Veja o que dizem os especialistas que deixaram de ser apenas mais um no mercado para virarem autoridades em vendas premium."
+    testimonialsTitle: "Corretores que já dominam suas",
+    testimonialsHighlight: "Vendas",
+    testimonialsSubhead: "Veja o que dizem os especialistas que deixaram de ser apenas mais um no mercado para virarem autoridades em vendas."
   }
 };
