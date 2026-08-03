@@ -60,36 +60,36 @@ export default function B2BGrowthSection() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 max-w-full">
           
           {/* Card 1: Vendas 24/7 (Grande) */}
           <div 
             ref={el => cardsRef.current[0] = el}
-            className="md:col-span-2 flex flex-col md:flex-row items-center gap-8 bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 hover:border-white/10 transition-colors shadow-2xl overflow-hidden relative group"
+            className="md:col-span-2 flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-[#0a0a0a] border border-white/5 rounded-2xl md:rounded-3xl p-5 md:p-8 hover:border-white/10 transition-colors shadow-2xl overflow-hidden relative group"
           >
             {/* Efeito Glow Interno */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6A00]/10 blur-[80px] rounded-full group-hover:bg-[#FF6A00]/20 transition-colors pointer-events-none" />
+            <div className="absolute top-0 right-0 w-40 md:w-64 h-40 md:h-64 bg-[#FF6A00]/10 blur-[80px] rounded-full group-hover:bg-[#FF6A00]/20 transition-colors pointer-events-none" />
             
-            <div className="flex-1 z-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Vendas 24/7, Sem Interrupções</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Bares, restaurantes e supermercados não param no fim de semana. Por que a sua distribuidora para? Com um Portal B2B ativo, o cliente tira o pedido à meia-noite de domingo.
+            <div className="flex-1 z-10 w-full">
+              <h3 className="text-xl md:text-3xl font-bold text-white mb-3 md:mb-4 leading-tight">Venda Atacado (B2B) e Varejo (B2C) 24h</h3>
+              <p className="text-gray-400 text-sm md:text-base mb-5 md:mb-6 leading-relaxed">
+                O bar precisa de reposição de urgência. O consumidor final quer bebida pro churrasco de domingo. Se você depende apenas de vendedores humanos no WhatsApp, você perde essas vendas.
               </p>
-              <ul className="flex flex-col gap-3">
-                {['Zero dependência de horário comercial', 'Fim das vendas perdidas por WhatsApp lento', 'Integração automática com seu ERP'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-gray-300 font-medium">
-                    <svg className="w-5 h-5 text-[#25D366]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <ul className="flex flex-col gap-2 md:gap-3">
+                {['Portal Atacado para bares e eventos', 'Delivery automatizado para o consumidor final', 'Integração de estoque em tempo real'].map((item, i) => (
+                  <li key={i} className="flex items-start md:items-center gap-3 text-xs md:text-sm text-gray-300 font-medium">
+                    <svg className="w-4 h-4 md:w-5 md:h-5 text-[#25D366] flex-shrink-0 mt-0.5 md:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    {item}
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             
             {/* Gráfico Real Injetado */}
-            <div className="w-full md:w-auto relative z-10 flex-shrink-0 flex justify-center perspective-[1000px]">
-              <div className="transform-gpu md:-rotate-y-12 md:rotate-x-12 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700">
+            <div className="w-full md:w-auto relative z-10 flex-shrink-0 flex justify-center perspective-[1000px] mt-6 md:mt-0">
+              <div className="transform-gpu md:-rotate-y-12 md:rotate-x-12 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 w-full max-w-[300px] md:max-w-none mx-auto">
                 <SalesChartWidget className="scale-95 md:scale-100 origin-right" />
               </div>
             </div>
@@ -98,51 +98,51 @@ export default function B2BGrowthSection() {
           {/* Card 2: Crescimento (+47%) (Pequeno) */}
           <div 
             ref={el => cardsRef.current[1] = el}
-            className="flex flex-col justify-center bg-gradient-to-br from-[#111] to-[#050505] border border-white/5 rounded-3xl p-8 hover:border-[#FF6A00]/30 transition-colors shadow-2xl relative overflow-hidden group"
+            className="flex flex-col justify-center bg-gradient-to-br from-[#111] to-[#050505] border border-white/5 rounded-2xl md:rounded-3xl p-6 md:p-8 hover:border-[#FF6A00]/30 transition-colors shadow-2xl relative overflow-hidden group min-h-[250px]"
           >
             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#FF6A00]/5 to-transparent pointer-events-none" />
             
-            <div className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mb-2">
+            <div className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mb-2">
               +47%
             </div>
-            <h4 className="text-white font-bold text-lg mb-2">Crescimento Médio</h4>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Distribuidoras que digitalizam seu processo de compras com portais B2B crescem sua carteira de clientes quase 50% mais rápido no primeiro ano.
+            <h4 className="text-white font-bold text-base md:text-lg mb-2">Crescimento Médio</h4>
+            <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
+              Distribuidoras que unem vendas físicas ao varejo digital e atacado automatizado disparam em faturamento.
             </p>
           </div>
 
           {/* Card 3: Pedidos ao Vivo (Pequeno) */}
           <div 
             ref={el => cardsRef.current[2] = el}
-            className="flex flex-col bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 hover:border-white/10 transition-colors shadow-2xl relative overflow-hidden"
+            className="flex flex-col bg-[#0a0a0a] border border-white/5 rounded-2xl md:rounded-3xl p-5 md:p-8 hover:border-white/10 transition-colors shadow-2xl relative overflow-hidden min-h-[300px]"
           >
-            <div className="mb-6 z-10 relative">
-              <h4 className="text-white font-bold text-xl mb-2">Máquina Autônoma</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Pare de digitar pedidos manualmente ouvindo áudios no WhatsApp.
+            <div className="mb-4 md:mb-6 z-10 relative">
+              <h4 className="text-white font-bold text-lg md:text-xl mb-2">Máquina Autônoma</h4>
+              <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
+                Deixe o sistema vender para o churrasco e repor o estoque do bar sozinho.
               </p>
             </div>
             
             <div className="relative z-10 w-full flex justify-center flex-1 items-end -mb-4">
-              <OrdersWidget className="w-full scale-100" />
+              <OrdersWidget className="w-full scale-95 md:scale-100" />
             </div>
           </div>
 
           {/* Card 4: Fim dos Erros Logísticos (Grande) */}
           <div 
             ref={el => cardsRef.current[3] = el}
-            className="md:col-span-2 flex flex-col md:flex-row items-center gap-8 bg-[#0a0a0a] border border-white/5 rounded-3xl p-8 hover:border-[#FF6A00]/20 transition-colors shadow-2xl relative group overflow-hidden"
+            className="md:col-span-2 flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-[#0a0a0a] border border-white/5 rounded-2xl md:rounded-3xl p-5 md:p-8 hover:border-[#FF6A00]/20 transition-colors shadow-2xl relative group overflow-hidden"
           >
-            <div className="w-full md:w-1/2 relative z-10 flex flex-col justify-center gap-4">
+            <div className="w-full md:w-1/2 relative z-10 flex flex-col justify-center gap-3 md:gap-4">
               <div className="flex items-end gap-3 text-[#FF6A00] mb-2">
-                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
                 </svg>
-                <span className="text-3xl font-black">- 85%</span>
+                <span className="text-2xl md:text-3xl font-black">- 85%</span>
               </div>
-              <h3 className="text-2xl font-bold text-white">Queda nos Erros de Logística</h3>
-              <p className="text-gray-400 leading-relaxed text-sm">
-                Pedido anotado errado gera devolução, insatisfação e custo de frete dobrado. Quando o próprio cliente insere o pedido no sistema e ele cai direto no seu ERP, a margem de erro vai a quase zero. Seu galpão agradece, seu bolso também.
+              <h3 className="text-xl md:text-2xl font-bold text-white">Queda nos Erros Logísticos</h3>
+              <p className="text-gray-400 leading-relaxed text-xs md:text-sm">
+                Pedido anotado errado gera devolução e dor de cabeça. Quando o cliente (CNPJ ou CPF) faz a compra direto no portal e ela cai no seu sistema, o erro cai a zero. Mais eficiência na rota de entrega.
               </p>
             </div>
             
