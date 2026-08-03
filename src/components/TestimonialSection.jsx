@@ -5,11 +5,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { getTestimonials } from '@/data/testimonials';
 import { TestimonialCard } from './ui/TestimonialCard';
+import { niches } from '@/config/niches';
 const TestimonialSection = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
   const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  const nicheData = niches[currentNiche] || niches.default;
   const { r1: row1, r2: row2 } = getTestimonials(currentNiche);
 
   useEffect(() => {
@@ -46,27 +48,13 @@ const TestimonialSection = () => {
         
         {/* Header da Seção */}
         <div ref={textRef} className="w-full flex flex-col items-center text-center mb-16 lg:mb-24">
-          {currentNiche === 'distribuidoras' ? (
-            <>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tighter">
-                Eles já estão faturando <br className="hidden md:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] to-[#ffaa66]">no automático</span>
-              </h2>
-              <p className="text-white/50 text-lg md:text-xl mt-6 max-w-2xl font-light">
-                Veja o que dizem os donos de distribuidoras que pararam de tirar pedidos na mão e passaram a escalar as vendas 24h por dia.
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tighter">
-                Não somos os únicos <br className="hidden md:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] to-[#ffaa66]">obcecados pela Soul</span>
-              </h2>
-              <p className="text-white/50 text-lg md:text-xl mt-6 max-w-2xl font-light">
-                Depoimentos de líderes visionários que confiaram em nosso design absoluto para escalar seus negócios.
-              </p>
-            </>
-          )}
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tighter">
+            {nicheData.testimonialsTitle} <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] to-[#ffaa66]">{nicheData.testimonialsHighlight}</span>
+          </h2>
+          <p className="text-white/50 text-lg md:text-xl mt-6 max-w-2xl font-light">
+            {nicheData.testimonialsSubhead}
+          </p>
         </div>
       </div>
 
