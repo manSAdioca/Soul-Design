@@ -13,6 +13,7 @@ export default function Hero() {
   const ctaRef = useRef(null);
   const benefitsRef = useRef(null);
   const rightColRef = useRef(null);
+  const textColRef = useRef(null);
 
   useEffect(() => {
     // 1. Canvas Particles Logic (Layer 4)
@@ -106,11 +107,11 @@ export default function Hero() {
       const ctxGsap = gsap.context(() => {
         const tl = gsap.timeline();
 
-        // Setup inicial (esconder)
-        // Setup inicial (esconder)
+        // Setup inicial (esconder e desfocar)
         gsap.set([subheadRef.current, ctaRef.current, rightColRef.current], {
           y: 20,
-          opacity: 0
+          opacity: 0,
+          filter: "blur(5px)"
         });
         
         if (benefitsRef.current) {
@@ -122,21 +123,21 @@ export default function Hero() {
 
         // Split headline text manually for word-by-word animation
         const words = headlineRef.current.querySelectorAll('.word');
-        gsap.set(words, { y: 20, opacity: 0, rotateX: 20 });
+        gsap.set(words, { y: 20, opacity: 0, rotateX: 10, filter: "blur(10px)" });
 
-        // Sequência de entrada
+        // Sequência de entrada com Blur Cinematográfico
         tl.to(words, {
-          y: 0, opacity: 1, rotateX: 0, duration: 0.8, stagger: 0.05, ease: 'power3.out'
+          y: 0, opacity: 1, rotateX: 0, filter: "blur(0px)", duration: 1.2, stagger: 0.05, ease: 'power3.out'
         })
         .to(subheadRef.current, {
-          y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
-        }, "-=0.6")
+          y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: 'power3.out'
+        }, "-=0.8")
         .to(ctaRef.current, {
-          y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
-        }, "-=0.6")
+          y: 0, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: 'power3.out'
+        }, "-=0.7")
         .to(rightColRef.current, {
-          y: 0, opacity: 1, duration: 1.2, ease: 'power2.out'
-        }, "-=1.5");
+          y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: 'power2.out'
+        }, "-=1.2");
 
         // Glow respirando lentamente (Loop) - efeito de fumaça iluminada
         gsap.to('.ambient-glow', {
@@ -156,6 +157,26 @@ export default function Hero() {
         ctxGsap.revert();
       };
     }
+  }, []);
+
+  // Parallax Effect Separado (Segurança de Memória)
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (!textColRef.current || window.innerWidth < 1024) return;
+      const { clientX, clientY } = e;
+      const xPos = (clientX / window.innerWidth - 0.5) * 30;
+      const yPos = (clientY / window.innerHeight - 0.5) * 30;
+      
+      gsap.to(textColRef.current, {
+        x: xPos,
+        y: yPos,
+        duration: 1.5,
+        ease: 'power2.out'
+      });
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   return (
@@ -184,7 +205,7 @@ export default function Hero() {
       <div className="relative z-[10] w-full max-w-[85rem] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
         
         {/* Coluna da Esquerda (Texto Ultra Limpo e Focado em Conversão) */}
-        <div className="flex flex-col max-w-xl mx-auto lg:mx-0 items-center text-center lg:items-start lg:text-left">
+        <div ref={textColRef} className="flex flex-col max-w-xl mx-auto lg:mx-0 items-center text-center lg:items-start lg:text-left">
           
           <h1 
             ref={headlineRef}
