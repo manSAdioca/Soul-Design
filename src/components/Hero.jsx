@@ -276,22 +276,24 @@ export default function Hero() {
             <div ref={rightColRef} className="absolute inset-0 flex items-center justify-center pointer-events-none">
               
               {/* Imagem do Cenário Gigante fixada na direita com Fade-out para a esquerda */}
-              <div className="absolute w-[150%] h-[120%] right-[-20%] top-[-10%] z-0">
+              <div 
+                className="absolute w-[160%] h-[120%] right-[-20%] top-[-10%] z-0"
+                style={{
+                  WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)',
+                  maskImage: 'radial-gradient(ellipse 80% 80% at 70% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)'
+                }}
+              >
                 <img 
                   src="/assets/hero-distribuidora.png" 
                   alt="Dor do Distribuidor"
                   className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
-                  style={{
-                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)',
-                    maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)'
-                  }}
                 />
                 
-                {/* Suaviza as bordas de cima e de baixo */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303] opacity-90" />
+                {/* Suaviza as bordas internas e escurece a imagem globalmente */}
+                <div className="absolute inset-0 bg-[#030303]/30" />
                 
                 {/* Brilho quente sutil de fogo para integrar à estética do site */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#FF6A00]/10 blur-[120px] mix-blend-color-dodge" />
+                <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[60%] h-[80%] bg-[#FF6A00]/20 blur-[150px] mix-blend-color-dodge" />
               </div>
               
             </div>
