@@ -269,56 +269,27 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Camada 5 & 6: Coluna da Direita (Mockups & Flutuantes) */}
-        <div className="relative hidden lg:block h-[650px] perspective-[2000px]">
+        {/* Camada 5 & 6: Coluna da Direita (Imagem Mesclada) */}
+        <div className="relative hidden lg:block h-[650px] flex items-center justify-center perspective-[2000px]">
           
-          <div ref={rightColRef} className="absolute inset-0">
-            {/* Glow indireto atrás do notebook */}
-            <div className="absolute right-[10%] top-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#FF6A00]/10 blur-[100px] rounded-full z-0" />
+          <div ref={rightColRef} className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Glow forte atrás da imagem para mesclar com o fundo */}
+            <div className="absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-[#FF6A00]/15 blur-[120px] rounded-full z-0" />
             
-            {/* Notebook Mockup */}
-            <div 
-              onClick={() => setIsNotebookClicked(!isNotebookClicked)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[432px] rotate-[-5deg] rotateX-[4deg] rotateY-[-12deg] shadow-[0_30px_60px_rgba(0,0,0,0.6)] rounded-2xl bg-[#0a0a0a] border border-white/5 overflow-hidden transform-gpu transition-all duration-700 hover:rotate-[-3deg] hover:rotateY-[-8deg] cursor-pointer group z-10"
-            >
-              <div className="h-8 bg-[#111] border-b border-white/5 flex items-center px-4 gap-2 relative z-10">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
-                  <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-                  <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
-                </div>
-                <span className="absolute left-1/2 -translate-x-1/2 text-[10px] text-white/30 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
-                  Interagir
-                </span>
-              </div>
-              <div className="relative h-[400px] w-full bg-[#030303] overflow-hidden">
-                <img 
-                  src="/assets/Sun & SAL DOBRA 2.webp" 
-                  alt="Criação de Loja Virtual de Alta Conversão"
-                  className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${isNotebookClicked ? 'opacity-0' : 'opacity-100'}`}
-                />
-                <img 
-                  src="/assets/Sun e sal 2 dobra 2.webp" 
-                  alt="Design Premium de E-commerce"
-                  className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${isNotebookClicked ? 'opacity-100' : 'opacity-0'}`}
-                />
-              </div>
-            </div>
-
-            {/* Smartphone Mockup */}
-            <div className="absolute left-[-2%] bottom-12 w-[32%] h-[400px] rotate-[6deg] rotateY-[12deg] shadow-[0_20px_50px_rgba(0,0,0,0.7)] rounded-[2.5rem] bg-[#050505] border-[5px] border-[#1a1a1a] p-1 overflow-hidden transform-gpu transition-all duration-700 hover:rotate-[4deg] hover:rotateY-[8deg] z-20">
-              <div className="absolute top-0 inset-x-0 h-4 bg-[#1a1a1a] rounded-b-xl w-[40%] mx-auto z-20" />
-              <div className="h-full w-full rounded-[1.75rem] bg-[#030303] border border-white/5 overflow-hidden relative">
-                <img 
-                  src="/assets/Drink Voro dobra 2.webp" 
-                  alt="Site Mobile First Focado em Conversão"
-                  className="absolute inset-0 w-full h-full object-cover object-top"
-                />
-              </div>
+            {/* Imagem mesclada sem bordas (usando CSS mask para apagar as bordas suavemente) */}
+            <div className="relative w-[130%] ml-20 z-10 transform-gpu rotate-y-[-15deg] rotate-x-[5deg] transition-transform duration-1000 ease-out">
+              <img 
+                src="/assets/hero-distribuidora.png" 
+                alt="Plataforma B2B Distribuidoras"
+                className="w-full h-auto object-cover opacity-90 filter contrast-125"
+                style={{
+                  WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%)',
+                  maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%)'
+                }}
+              />
             </div>
           </div>
 
-          {/* Camada 6 removida: Elementos Flutuantes Tecnológicos */}
 
         </div>
       </div>
