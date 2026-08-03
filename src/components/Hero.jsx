@@ -209,7 +209,7 @@ export default function Hero() {
 
       {/* Camada 4.5: Cenário Gigante de Fundo (Full Bleed Right) */}
       {nicheData.heroImage && currentNiche !== 'default' && (
-        <div className="absolute inset-y-0 right-0 w-[100vw] md:w-[65vw] z-[4] pointer-events-none overflow-hidden">
+        <div className={`absolute inset-y-0 right-0 w-[100vw] md:w-[65vw] z-[4] pointer-events-none overflow-hidden ${currentNiche === 'corretores' ? 'hidden md:block' : ''}`}>
           <div className="absolute inset-0 hero-bg-mask">
             <img 
               src={nicheData.heroImage} 
