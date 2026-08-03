@@ -27,5 +27,11 @@ export const getProjects = (niche) => {
       { id: 'd2', desktop: '/assets/distribuidora-dashboard.png', name: "Dashboard de Gestão e Operações" }
     ];
   }
+  if (niche === 'corretores') {
+    return [
+      { id: 'c1', desktop: p2, name: "Site Institucional Alto Padrão" },
+      { id: 'c2', desktop: p9, name: "Landing Page de Lançamento" }
+    ];
+  }
   return projects;
 };
