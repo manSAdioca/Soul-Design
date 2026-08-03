@@ -24,7 +24,7 @@ const TestimonialSection = () => {
           ease: 'power3.out'
         }
       );
-    }, sectionRef);
+    }, sectionRef.current);
     return () => ctx.revert();
   }, []);
 

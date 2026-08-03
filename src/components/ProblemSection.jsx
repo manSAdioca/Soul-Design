@@ -114,7 +114,7 @@ const BackgroundLines = () => {
           }
         );
       });
-    }, linesRef);
+    }, linesRef.current);
 
     return () => ctx.revert();
   }, []);
@@ -171,7 +171,7 @@ const ProblemSection = () => {
         }
       );
 
-    }, sectionRef);
+    }, sectionRef.current);
 
     return () => ctx.revert();
   }, []);

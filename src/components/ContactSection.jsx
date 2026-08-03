@@ -95,7 +95,7 @@ const ContactSection = () => {
           delay: 0.2
         }
       );
-    }, sectionRef);
+    }, sectionRef.current);
     return () => ctx.revert();
   }, []);
 

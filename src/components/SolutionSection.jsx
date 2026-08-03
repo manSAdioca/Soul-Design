@@ -77,7 +77,7 @@ const SolutionSection = () => {
         delay: 2
       });
 
-    }, sectionRef);
+    }, sectionRef.current);
     return () => ctx.revert();
   }, []);  return (
     <section ref={sectionRef} className="relative w-full bg-[#030303] pt-24 pb-32 lg:pt-32 lg:pb-40 overflow-hidden z-10 border-t border-white/[0.02]">

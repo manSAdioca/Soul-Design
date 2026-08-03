@@ -151,7 +151,7 @@ export default function Hero() {
           ease: 'sine.inOut'
         });
 
-      }, containerRef);
+      }, containerRef.current);
 
       return () => {
         window.removeEventListener('resize', resize);
