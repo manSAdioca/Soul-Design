@@ -3,7 +3,7 @@ export default function Marquee() {
   const textArray = Array(5).fill(repeatedText).join(" "); // Repeat text enough times to fill 200% width
 
   return (
-    <div className="relative w-full overflow-hidden bg-transparent h-[250px] flex items-center justify-center -mt-28 lg:-mt-40 z-20 pointer-events-none">
+    <div className="relative w-full overflow-hidden bg-transparent h-[250px] flex items-center justify-center -mt-28 lg:-mt-16 z-20 pointer-events-none">
       
       {/* Background Marquee (Levemente desfocada, movendo para a direita) */}
       <div className="absolute w-[130%] rotate-[6deg] z-0 translate-y-2">
