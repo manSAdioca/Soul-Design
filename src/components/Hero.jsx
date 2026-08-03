@@ -205,8 +205,7 @@ export default function Hero() {
             ref={subheadRef}
             className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-[90%] lg:max-w-none tracking-wide"
           >
-            Seu site, sua identidade visual e sua presença digital são responsáveis pela primeira impressão que define se alguém compra de você ou procura outra empresa.<br/><br/>
-            Criamos experiências digitais que aumentam autoridade, confiança e conversão.
+            A primeira impressão define se um cliente escolhe você ou o seu concorrente.<br className="hidden md:block"/> Criamos marcas e sites que transmitem confiança e geram mais oportunidades.
           </h2>
           
           <div ref={ctaRef} className="flex flex-col items-center lg:items-start gap-4 mb-14 w-full sm:w-auto relative">
