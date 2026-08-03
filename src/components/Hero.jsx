@@ -273,25 +273,29 @@ export default function Hero() {
         <div className="relative hidden lg:block h-[650px] flex items-center justify-center perspective-[2000px]">
           
           {currentNiche === 'distribuidoras' ? (
-            <div ref={rightColRef} className="fixed lg:absolute top-0 right-0 w-[55vw] h-full pointer-events-none z-[-1] overflow-hidden">
+            <div ref={rightColRef} className="absolute inset-0 flex items-center justify-center pointer-events-none">
               
-              {/* Imagem do Cenário Gigante */}
-              <img 
-                src="/assets/hero-distribuidora.png" 
-                alt="Dor do Distribuidor"
-                className="absolute inset-0 w-full h-full object-cover object-right opacity-40 mix-blend-luminosity filter contrast-125"
-              />
-              
-              {/* Degradê vindo da Esquerda (Preto Sólido para Transparente) para mesclar a imagem ao fundo escuro */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/80 to-transparent" />
-              
-              {/* Degradê de Cima e de Baixo para suavizar as bordas verticais */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303]" />
-              
-              {/* Brilho quente sutil de fogo para integrar à estética do site */}
-              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full h-full bg-[#FF6A00]/10 blur-[150px] mix-blend-color-dodge" />
+              {/* Imagem do Cenário Gigante fixada na direita com Fade-out para a esquerda */}
+              <div className="absolute w-[150%] h-[120%] right-[-20%] top-[-10%] z-0">
+                <img 
+                  src="/assets/hero-distribuidora.png" 
+                  alt="Dor do Distribuidor"
+                  className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
+                  style={{
+                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)',
+                    maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%)'
+                  }}
+                />
+                
+                {/* Suaviza as bordas de cima e de baixo */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303] opacity-90" />
+                
+                {/* Brilho quente sutil de fogo para integrar à estética do site */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#FF6A00]/10 blur-[120px] mix-blend-color-dodge" />
+              </div>
               
             </div>
+
           ) : (
             <div ref={rightColRef} className="absolute inset-0">
               {/* Glow indireto atrás do notebook */}
