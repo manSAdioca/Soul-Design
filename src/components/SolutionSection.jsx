@@ -148,13 +148,13 @@ const SolutionSection = () => {
           <div ref={laptopEnterRef} className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-8 z-40 relative px-0">
             <LaptopMockup 
               imageSrc="/assets/distribuidora-catalogo.png" 
-              title="Portal B2B e B2C Imperatriz" 
-              description="Um catálogo ultra-rápido projetado para conversão. Permita que seus clientes de atacado e varejo comprem 24h por dia, sem depender de vendedores no WhatsApp."
+              title="Portal B2B e B2C de Alta Conversão" 
+              description="Venda no piloto automático 24 horas por dia. Transformamos seu catálogo em uma verdadeira máquina de vendas para atacado e varejo, acabando de vez com a dependência de tirar pedidos pelo WhatsApp."
             />
             <LaptopMockup 
               imageSrc="/assets/distribuidora-dashboard.png" 
-              title="Dashboard de Gestão e Operações" 
-              description="Assuma o controle total da sua distribuidora. Acompanhe faturamento, pedidos em tempo real e os produtos mais vendidos em uma interface escura focada em métricas."
+              title="Dashboard de Escala e Gestão" 
+              description="Escale sua distribuidora com inteligência. Tenha o raio-X completo do faturamento e métricas em tempo real para tomar decisões rápidas, reduzir gargalos e dominar a concorrência na sua região."
             />
           </div>
 
