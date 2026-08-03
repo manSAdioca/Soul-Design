@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, CheckCircle2, Zap, BarChart3, Smartphone } from 'lucide-react';
 import gsap from 'gsap';
 import { trackConversion } from '@/utils/analytics';
+import { niches } from '@/config/niches';
+
 export default function Hero() {
   const [isNotebookClicked, setIsNotebookClicked] = useState(false);
   const containerRef = useRef(null);
@@ -14,6 +16,10 @@ export default function Hero() {
   const benefitsRef = useRef(null);
   const rightColRef = useRef(null);
   const textColRef = useRef(null);
+
+  // Carregar dados baseados na variável injetada pelo SSG ou fallback pro default
+  const currentNiche = typeof window !== 'undefined' && window.NICHE ? window.NICHE : 'default';
+  const nicheData = niches[currentNiche] || niches.default;
 
   useEffect(() => {
     // 1. Canvas Particles Logic (Layer 4)
@@ -211,11 +217,20 @@ export default function Hero() {
             ref={headlineRef}
             className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8 md:mb-10 perspective-[1200px] [text-shadow:0_10px_20px_rgba(0,0,0,0.9),_0_2px_4px_rgba(255,255,255,0.1)]"
           >
-            {/* Animating word by word */}
-            <span className="inline-block"><span className="word inline-block">Seu</span>&nbsp;<span className="word inline-block">concorrente</span>&nbsp;<span className="word inline-block">conquista</span>&nbsp;<span className="word inline-block">clientes</span></span><br className="hidden lg:block" />
-            <span className="inline-block"><span className="word inline-block">antes</span>&nbsp;<span className="word inline-block">mesmo</span>&nbsp;<span className="word inline-block">de</span>&nbsp;<span className="word inline-block">falar</span>&nbsp;<span className="word inline-block">com</span>&nbsp;<span className="word inline-block">eles.</span></span><br className="hidden lg:block" />
+            {nicheData.heroTitleLines.map((line, lineIndex) => (
+              <span key={lineIndex} className="inline-block">
+                {line.split(' ').map((word, wordIndex) => (
+                  <span key={wordIndex}>
+                    <span className="word inline-block">{word}</span>
+                    {wordIndex !== line.split(' ').length - 1 && <>&nbsp;</>}
+                  </span>
+                ))}
+                {lineIndex !== nicheData.heroTitleLines.length - 1 && <br className="hidden lg:block" />}
+              </span>
+            ))}
+            <br className="hidden lg:block" />
             <span className="word inline-block bg-gradient-to-r from-[#FF6A00] to-[#ff984d] text-transparent bg-clip-text mt-2 drop-shadow-[0_0_30px_rgba(255,106,0,0.2)]">
-              Você também pode.
+              {nicheData.heroHighlight}
             </span>
           </h1>
 
@@ -223,7 +238,7 @@ export default function Hero() {
             ref={subheadRef}
             className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-16 md:mb-14 max-w-[90%] lg:max-w-none tracking-wide"
           >
-            A primeira impressão decide quem conquista o cliente.<br className="hidden md:block"/> Criamos marcas e sites que aumentam confiança, autoridade e vendas.
+            {nicheData.heroSubhead}
           </h2>
           
           <div ref={ctaRef} className="flex flex-col items-center lg:items-start gap-4 mb-14 w-full sm:w-auto relative">
@@ -243,7 +258,7 @@ export default function Hero() {
                 {/* Brilho passando lentamente no hover (Shine effect) */}
                 <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:animate-[shine_1.5s_ease-in-out_infinite] z-20 pointer-events-none" />
                 
-                <span className="relative z-10">Quero destacar minha empresa</span>
+                <span className="relative z-10">{nicheData.heroButton}</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                 {/* Glow interno (Inner shadow sutil) */}
                 <div className="absolute inset-0 rounded-[20px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] pointer-events-none" />

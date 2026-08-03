@@ -2,6 +2,16 @@
   "rewrites": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "distribuidoras.souldesign.com.br"
+        }
+      ],
+      "destination": "/distribuidoras.html"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
