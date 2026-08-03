@@ -14,12 +14,12 @@ const LaptopMockup = ({ imageSrc, title, description }) => (
         
         {/* Tela do Laptop */}
         <div className="w-full h-full pt-4 md:pt-6 bg-[#050505] rounded-t-xl overflow-hidden">
-          <div className="w-full aspect-video bg-[#050505] relative overflow-hidden border-b border-[#222]">
+          <div className="w-full aspect-[2/1] bg-[#050505] relative overflow-hidden border-b border-[#222]">
             <img 
               loading="lazy"
               src={imageSrc} 
               alt={title} 
-              className="absolute inset-0 w-full h-full object-contain object-center bg-[#050505]"
+              className="absolute inset-0 w-full h-full object-cover object-top"
             />
             {/* Glare on Hover */}
             <div className="absolute top-0 left-[-100%] w-[150%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-[30deg] pointer-events-none z-30 opacity-0 group-hover:opacity-100 group-hover:animate-[shine_1.5s_ease-in-out]" />
