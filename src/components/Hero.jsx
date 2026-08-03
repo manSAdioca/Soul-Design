@@ -222,7 +222,7 @@ export default function Hero() {
             <img 
               src={nicheData.heroImage} 
               alt="Dor do Cliente"
-              className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
+              className="w-full h-full object-cover object-[80%_center] sm:object-center opacity-30 mix-blend-luminosity filter contrast-125"
             />
             
             {/* Suaviza as bordas internas e escurece a imagem globalmente */}
