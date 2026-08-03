@@ -234,20 +234,6 @@ export default function Hero() {
             
 
           </div>
-
-          <div ref={benefitsRef} className="flex flex-wrap justify-center lg:justify-start gap-y-5 gap-x-8 text-[13px] text-gray-400 font-medium w-full lg:w-[120%] tracking-wide">
-            <div className="flex items-center gap-2.5 group cursor-default transition-colors hover:text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-[#FF6A00]/80 group-hover:text-[#FF6A00] transition-colors" /> Design exclusivo
-            </div>
-            <div className="flex items-center gap-2.5 group cursor-default transition-colors hover:text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-[#FF6A00]/80 group-hover:text-[#FF6A00] transition-colors" /> Mobile First
-            </div>
-            <div className="flex items-center gap-2.5 group cursor-default transition-colors hover:text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-[#FF6A00]/80 group-hover:text-[#FF6A00] transition-colors" /> Alta performance
-            </div>
-            <div className="flex items-center gap-2.5 group cursor-default transition-colors hover:text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-[#FF6A00]/80 group-hover:text-[#FF6A00] transition-colors" /> SEO otimizado
-            </div>
           </div>
         </div>
 
