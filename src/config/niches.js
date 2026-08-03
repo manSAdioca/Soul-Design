@@ -73,30 +73,30 @@ export const niches = {
     ]
   },
   distribuidoras: {
-    seoTitle: "Soul Design para Distribuidoras | Venda mais B2B",
-    seoDescription: "Criação de catálogos e sites B2B de alta performance para distribuidoras.",
+    seoTitle: "Soul Design para Distribuidoras de Bebidas | Venda mais B2B",
+    seoDescription: "Criação de catálogos e sites B2B de alta performance para adegas e distribuidoras de bebidas.",
     
     // Hero Section
     heroTitleLines: [
-      "Sua distribuidora perde pedidos",
+      "Sua distribuidora de bebidas perde pedidos",
       "por depender só do WhatsApp."
     ],
     heroHighlight: "Automatize suas vendas.",
-    heroSubhead: "Catálogos B2B ultra-rápidos que vendem 24h por dia. Transforme visitantes em compradores sem depender de vendedores.",
+    heroSubhead: "Catálogos B2B ultra-rápidos que vendem fardos, barris e gelo 24h por dia. Transforme donos de bares e mercadinhos em compradores automáticos.",
     heroButton: "Quero automatizar minhas vendas",
 
     // Problem Section - Focado em Dores de B2B e Gráficos Analíticos
-    problemsTitle: "Quanto faturamento sua distribuidora deixou na mesa neste fim de semana?",
-    problemsSubhead: "Enquanto sua equipe descansa, seus clientes procuram repor o estoque. Se você não tem um portal automático, o concorrente tem.",
+    problemsTitle: "Quanto faturamento sua adega ou distribuidora deixou na mesa neste fim de semana?",
+    problemsSubhead: "Enquanto sua equipe descansa, bares e restaurantes procuram repor estoque para o movimento. Se você não tem um portal automático, o concorrente tem.",
     problems: [
       {
         title: "Pedidos Fora de Hora",
-        description: "Bares e restaurantes fecham tarde. Se o dono precisar repor estoque no domingo à noite e você não tiver um portal B2B, a venda vai para outro.",
+        description: "Bares e baladas compram tarde da noite. Se o dono precisar repor destilados ou gelo na madrugada e você não tiver um portal B2B, a venda vai para outro.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
       },
       {
         title: "Gargalo no WhatsApp",
-        description: "Seus vendedores passam o dia tirando dúvidas básicas de estoque e preço no Zap em vez de abrir novos clientes. Um desperdício de tempo e dinheiro.",
+        description: "Seus vendedores passam a sexta-feira tirando dúvidas de tabela de preço e estoque de cerveja no Zap em vez de abrir novos clientes. Desperdício de tempo.",
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>`
       },
       {
@@ -118,17 +118,17 @@ export const niches = {
       },
       {
         title: "Ruptura de Estoque Silenciosa",
-        description: "Seu cliente faz um pedido via WhatsApp de um produto que acabou. A venda é cancelada e a experiência é frustrante. O catálogo digital resolve isso em tempo real.",
+        description: "O dono do mercadinho pede um fardo via WhatsApp e você avisa que acabou. A venda é cancelada e ele fica frustrado. O catálogo digital mostra o estoque real.",
         // Banco de Dados Vazio
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>`
       }
     ],
     solutionsTitle: "Automatize e Escale com Nosso",
-    solutionsTitleHighlight: "Portal de Vendas B2B",
+    solutionsTitleHighlight: "Portal de Bebidas B2B",
     solutions: [
       {
         title: "Catálogo Dinâmico Inteligente",
-        description: "Apresente todo o seu mix de produtos com preços segmentados por cliente. O estoque é sincronizado, impedindo vendas do que você não tem.",
+        description: "Apresente todo o seu mix de bebidas com preços segmentados por cliente. O estoque é sincronizado, impedindo a venda do que não tem no galpão.",
         // Gráfico de Linhas (Dashboard)
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>`
       },
@@ -140,7 +140,7 @@ export const niches = {
       },
       {
         title: "Autoatendimento 24 Horas",
-        description: "O dono do supermercado não tem tempo comercial. Seu portal B2B permite que ele monte o carrinho à meia-noite e gere a ordem de compra sem humanos.",
+        description: "O dono do bar não tem horário comercial. Seu portal B2B permite que ele repita pedidos de fardos e gelo à meia-noite, gerando a ordem de compra sozinho.",
         // Relógio / Tempo / Automação
         iconSvg: `<svg class="w-7 h-7 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path class="draw-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
       },

@@ -52,30 +52,30 @@ export const genericTestimonialsRow2 = [
   }
 ];
 
-// Testimonials for "distribuidoras" niche (Realistic, Revenue-focused)
+// Testimonials for "distribuidoras" niche (Drinks / Bebidas focused)
 export const distribuidorasRow1 = [
   {
     name: "Sérgio Moraes",
-    company: "Moraes Atacadista",
-    text: "A Soul revolucionou nossa operação. Nosso time comercial perdia horas tirando pedido no WhatsApp. Agora, 40% das vendas rodam no automático enquanto a gente dorme.",
+    company: "Disk Bebidas Moraes",
+    text: "A Soul revolucionou nossa operação. Nosso time perdia horas tirando pedido no WhatsApp na sexta-feira. Agora, 40% das vendas de fardos e barris rodam no automático enquanto a gente atende o balcão.",
     avatar: "https://i.pravatar.cc/150?img=11"
   },
   {
     name: "Felipe Costa",
-    company: "Distribuidora Costa",
-    text: "Fiquei com medo de implementar o sistema e não integrar com meu estoque, mas a plataforma da Soul leu tudo. Zeramos as rupturas de estoque nos pedidos B2B.",
+    company: "Adega e Distribuidora Costa",
+    text: "Fiquei com medo de implementar o sistema e dar pau no fim de semana, que é quando a adega bomba. A plataforma da Soul segurou a onda e zeramos os erros de entrega de gelo e destilados.",
     avatar: "https://i.pravatar.cc/150?img=33"
   },
   {
     name: "Luciana Silva",
-    company: "Bebidas Premium",
-    text: "O dashboard da Soul me deu um raio-x que eu não tinha no meu ERP antigo. Eu vejo exatamente o que mais vende e consigo fazer campanhas focadas. Faturamento subiu 28% no semestre.",
+    company: "Império das Bebidas",
+    text: "O dashboard da Soul me deu um raio-x que eu não tinha. Vejo exatamente qual cerveja está saindo mais rápido na sexta-feira e consigo fazer promoções relâmpago. Faturamento subiu 28%.",
     avatar: "https://i.pravatar.cc/150?img=9"
   },
   {
     name: "Marcos Venâncio",
-    company: "Venâncio Alimentos",
-    text: "Antes da Soul, eu precisava contratar mais dois vendedores para dar conta de sexta-feira. Com o catálogo online, o próprio lojista faz o pedido. Economizei em folha e vendi mais.",
+    company: "Venâncio Disk Bebidas",
+    text: "Antes da Soul, o WhatsApp congestionava no sábado à noite e a gente perdia pedido. Com o catálogo online, o próprio cliente do bar acessa e pede. Economizei em folha e vendi mais.",
     avatar: "https://i.pravatar.cc/150?img=12"
   }
 ];
@@ -83,26 +83,26 @@ export const distribuidorasRow1 = [
 export const distribuidorasRow2 = [
   {
     name: "Thiago Oliveira",
-    company: "Oliveira & Cia Distribuição",
-    text: "A clareza dos dados que a Soul entrega é um absurdo. Sei exatamente qual vendedor está batendo meta e qual cliente parou de comprar, tudo na tela do meu celular.",
+    company: "Oliveira Distribuidora",
+    text: "A clareza dos dados que a Soul entrega é um absurdo. Sei exatamente qual festa comprou mais barris de chopp na semana passada e se o estoque de gelo vai aguentar o feriado, tudo pelo celular.",
     avatar: "https://i.pravatar.cc/150?img=8"
   },
   {
     name: "Renata Alves",
-    company: "Atacadão das Embalagens",
-    text: "O catálogo é extremamente rápido. Nossos clientes do varejo elogiavam a facilidade, porque eles compram direto pelo celular, sem precisar baixar app nenhum. Resultado imediato.",
+    company: "Atacadão do Gelo",
+    text: "O catálogo é extremamente rápido. Nossos clientes e donos de bar elogiam muito a facilidade, porque eles compram a reposição direto pelo celular, sem precisar baixar app nenhum.",
     avatar: "https://i.pravatar.cc/150?img=5"
   },
   {
     name: "Rodrigo Almeida",
-    company: "Almeida Ferragens",
-    text: "Sempre achei que e-commerce B2B era luxo para distribuidora gigante. A Soul me mostrou que com o portal certo, qualquer distribuidora vira uma máquina de lucros 24h.",
+    company: "Almeida Bebidas B2B",
+    text: "Sempre achei que catálogo online era luxo das gigantes como Ambev. A Soul me mostrou que com o portal certo, qualquer distribuidora de bebidas vira uma máquina de lucros 24h.",
     avatar: "https://i.pravatar.cc/150?img=60"
   },
   {
     name: "Bruno Garcia",
-    company: "Garcia Distribuidora",
-    text: "Reduzimos a margem de erro nos pedidos para literalmente zero. Cliente entra, vê a tabela de preços dele logada na Soul, compra, e a nota já sai no sistema. Coisa de louco.",
+    company: "Garcia Adega Atacadista",
+    text: "Reduzimos a margem de erro nos pedidos para zero. Dono de bar entra, vê a tabela de preços dele, pede os fardos de cerveja e a nota já sai no sistema. Coisa de louco.",
     avatar: "https://i.pravatar.cc/150?img=59"
   }
 ];
