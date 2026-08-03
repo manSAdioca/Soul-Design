@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { niches } from '@/config/niches';
-
+import SalesChartWidget from './ui/SalesChartWidget';
+import OrdersWidget from './ui/OrdersWidget';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -233,6 +234,18 @@ const ProblemSection = () => {
 
       {/* Linhas verticais passando pelo Fundo */}
       <BackgroundLines />
+
+      {/* Gráficos Flutuantes B2B (Visíveis apenas no nicho distribuidoras) */}
+      {currentNiche === 'distribuidoras' && (
+        <>
+          <div className="absolute top-[5%] lg:top-[10%] left-[-10%] md:left-[5%] z-0 opacity-20 md:opacity-40 pointer-events-none transform -rotate-12 scale-75 md:scale-100 blur-[2px] md:blur-[1px]">
+            <SalesChartWidget />
+          </div>
+          <div className="absolute top-[15%] lg:top-[20%] right-[-10%] md:right-[5%] z-0 opacity-20 md:opacity-40 pointer-events-none transform rotate-[8deg] scale-75 md:scale-100 blur-[2px] md:blur-[1px]">
+            <OrdersWidget />
+          </div>
+        </>
+      )}
 
       <div className="max-w-[85rem] mx-auto px-6 relative z-10">
         
