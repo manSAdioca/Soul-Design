@@ -353,11 +353,13 @@ const ProblemSection = () => {
         </div>
 
         {/* Indicador de Swipe Mobile para Problemas */}
-        <div className="flex md:hidden items-center justify-center gap-2 mt-4 text-[#FF6A00]/70 animate-pulse">
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-          </svg>
-          <span className="text-xs uppercase tracking-widest font-bold">Deslize para ver mais</span>
+        <div className="flex md:hidden justify-center mt-6">
+          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-pulse">
+            <svg className="w-4 h-4 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-[0.2em] font-medium">Deslize para ver mais</span>
+          </div>
         </div>
 
         {/* Separador e Header de Soluções */}
@@ -386,11 +388,13 @@ const ProblemSection = () => {
         </div>
 
         {/* Indicador de Swipe Mobile para Soluções */}
-        <div className="flex md:hidden items-center justify-center gap-2 mt-4 text-[#FF6A00]/70 animate-pulse">
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-          </svg>
-          <span className="text-xs uppercase tracking-widest font-bold">Deslize para ver mais</span>
+        <div className="flex md:hidden justify-center mt-6">
+          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-pulse">
+            <svg className="w-4 h-4 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-[0.2em] font-medium">Deslize para ver mais</span>
+          </div>
         </div>
 
       </div>
