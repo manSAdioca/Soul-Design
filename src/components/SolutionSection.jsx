@@ -19,7 +19,7 @@ const LaptopMockup = ({ imageSrc, title, description }) => (
               loading="lazy"
               src={imageSrc} 
               alt={title} 
-              className="absolute inset-0 w-full h-full object-cover object-top"
+              className="absolute inset-0 w-full h-full object-contain object-top bg-black"
             />
             {/* Glare on Hover */}
             <div className="absolute top-0 left-[-100%] w-[150%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-[30deg] pointer-events-none z-30 opacity-0 group-hover:opacity-100 group-hover:animate-[shine_1.5s_ease-in-out]" />
@@ -132,7 +132,7 @@ const SolutionSection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(255,106,0,0.1)_0%,transparent_60%)] pointer-events-none rounded-full z-0" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-t from-[#000000] to-transparent pointer-events-none z-0" />
 
-      <div className="max-w-[90rem] mx-auto px-6 relative z-10 flex flex-col items-center">
+      <div className="max-w-[100rem] mx-auto px-2 md:px-6 relative z-10 flex flex-col items-center">
         
         {/* Textos Minimalistas */}
         <div ref={textRef} className="w-full flex flex-col items-center text-center mb-10 lg:mb-16">
@@ -145,7 +145,7 @@ const SolutionSection = () => {
         {/* Renderização Condicional do Palco */}
         {currentNiche === 'distribuidoras' ? (
           
-          <div ref={laptopEnterRef} className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-8 z-40 relative px-0">
+          <div ref={laptopEnterRef} className="w-full max-w-[1400px] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-8 z-40 relative px-0">
             <LaptopMockup 
               imageSrc="/assets/distribuidora-catalogo.png" 
               title="Portal B2B e B2C de Alta Conversão" 
@@ -163,7 +163,7 @@ const SolutionSection = () => {
             {/* Palco do Mockup Centralizado (Default) */}
             
             {/* Container Externo para Entrada (Slide In) */}
-            <div ref={laptopEnterRef} className="w-full max-w-[1300px] 2xl:max-w-[1400px] z-40 relative px-0" style={{ transformStyle: 'preserve-3d' }}>
+            <div ref={laptopEnterRef} className="w-full max-w-[1400px] 2xl:max-w-[1600px] z-40 relative px-0" style={{ transformStyle: 'preserve-3d' }}>
               
               {/* Container Interno para Flutuação (Zero Gravity) */}
               <div 
@@ -185,7 +185,7 @@ const SolutionSection = () => {
                         key={`${project.id}-${i}`}
                         src={project.desktop} 
                         alt={project.name} 
-                        className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-[1.03] pointer-events-none z-0'}`}
+                        className={`absolute inset-0 w-full h-full object-contain object-top bg-black transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-[1.03] pointer-events-none z-0'}`}
                       />
                     ))}
                     
