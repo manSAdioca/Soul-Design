@@ -250,6 +250,28 @@ export default function Hero() {
               </button>
             </div>
             
+            {/* Trust Badges Premium (Glassmorphism) */}
+            <div className="flex flex-row flex-wrap justify-center lg:justify-start items-center gap-3 md:gap-4 mt-8 pt-8 border-t border-white/5 w-full">
+              <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-md hover:bg-white/[0.04] transition-colors cursor-default">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#FF6A00]/20 to-transparent border border-[#FF6A00]/20 text-[#FF6A00]">
+                  <CheckCircle2 className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col items-start">
+                  <span className="text-white font-black text-sm md:text-base leading-tight">+150</span>
+                  <span className="text-gray-400 text-[9px] md:text-[10px] uppercase tracking-[0.1em] font-medium">Projetos Entregues</span>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-md hover:bg-white/[0.04] transition-colors cursor-default">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#25D366]/20 to-transparent border border-[#25D366]/20 text-[#25D366]">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col items-start">
+                  <span className="text-white font-black text-sm md:text-base leading-tight">Fast</span>
+                  <span className="text-gray-400 text-[9px] md:text-[10px] uppercase tracking-[0.1em] font-medium">Entrega Rápida</span>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
