@@ -2,26 +2,6 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "corretores.soulestrategia.com"
-        }
-      ],
-      "destination": "/corretores.html"
-    },
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "distribuidoras.soulestrategia.com"
-        }
-      ],
-      "destination": "/distribuidoras.html"
-    },
-    {
-      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

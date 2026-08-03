@@ -10,16 +10,7 @@ const TestimonialSection = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
-  let currentNiche = 'default';
-  if (typeof window !== 'undefined') {
-    if (window.location.hostname.includes('corretores')) {
-      currentNiche = 'corretores';
-    } else if (window.location.hostname.includes('distribuidoras')) {
-      currentNiche = 'distribuidoras';
-    } else if (window.NICHE) {
-      currentNiche = window.NICHE;
-    }
-  }
+  const currentNiche = import.meta.env.VITE_NICHE || 'default';
   const nicheData = niches[currentNiche] || niches.default;
   const { r1: row1, r2: row2 } = getTestimonials(currentNiche);
 
