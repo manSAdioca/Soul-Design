@@ -205,7 +205,7 @@ export default function Hero() {
             ref={subheadRef}
             className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-[90%] lg:max-w-none tracking-wide"
           >
-            A primeira impressão define se um cliente escolhe você ou o seu concorrente.<br className="hidden md:block"/> Criamos marcas e sites que transmitem confiança e geram mais oportunidades.
+            A primeira impressão decide quem conquista o cliente.<br className="hidden md:block"/> Criamos marcas e sites que aumentam confiança, autoridade e vendas.
           </h2>
           
           <div ref={ctaRef} className="flex flex-col items-center lg:items-start gap-4 mb-14 w-full sm:w-auto relative">
@@ -225,7 +225,7 @@ export default function Hero() {
                 {/* Brilho passando lentamente no hover (Shine effect) */}
                 <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:animate-[shine_1.5s_ease-in-out_infinite] z-20 pointer-events-none" />
                 
-                <span className="relative z-10">Saiba mais</span>
+                <span className="relative z-10">Quero destacar minha empresa</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                 {/* Glow interno (Inner shadow sutil) */}
                 <div className="absolute inset-0 rounded-[20px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] pointer-events-none" />
