@@ -69,7 +69,7 @@ const MagneticCard = ({ title, description, icon }) => {
         <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none z-0">
           <div 
             ref={glowRef}
-            className="absolute top-0 left-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,106,0,0.1)_0%,transparent_50%)] opacity-0 pointer-events-none mix-blend-screen"
+            className="absolute top-0 left-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,106,0,0.1)_0%,transparent_50%)] opacity-0 pointer-events-none"
             style={{ transform: 'translate(-400px, -400px)' }}
           />
         </div>
@@ -120,7 +120,7 @@ const BackgroundLines = () => {
   }, []);
 
   return (
-    <div ref={linesRef} className="absolute inset-0 z-0 pointer-events-none opacity-40 overflow-hidden mix-blend-screen">
+    <div ref={linesRef} className="absolute inset-0 z-0 pointer-events-none opacity-40 overflow-hidden">
       <div className="absolute inset-0 flex justify-evenly">
         {/* Linhas guias verticais com feixes de luz (beams) caindo */}
         {[1, 2, 3, 4, 5].map((_, i) => (
@@ -319,7 +319,7 @@ const ProblemSection = () => {
       
       {/* Background Ambience Glow */}
       <div className="absolute inset-0 pointer-events-none flex justify-center items-center z-0">
-        <div className="w-[80vw] h-[400px] bg-[#FF6A00]/5 blur-[150px] mix-blend-screen opacity-50" />
+        <div className="w-[80vw] h-[400px] bg-[radial-gradient(circle,rgba(255,106,0,0.05)_0%,transparent_60%)] opacity-50" />
       </div>
 
       {/* Linhas verticais passando pelo Fundo */}
@@ -354,7 +354,7 @@ const ProblemSection = () => {
 
         {/* Indicador de Swipe Mobile para Problemas */}
         <div className="flex md:hidden justify-center mt-6">
-          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-pulse">
+          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#111111]/80 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-pulse">
             <svg className="w-4 h-4 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
             </svg>
@@ -389,7 +389,7 @@ const ProblemSection = () => {
 
         {/* Indicador de Swipe Mobile para Soluções */}
         <div className="flex md:hidden justify-center mt-6">
-          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-pulse">
+          <div className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#111111]/80 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-pulse">
             <svg className="w-4 h-4 text-[#FF6A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
             </svg>

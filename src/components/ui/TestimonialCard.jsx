@@ -2,10 +2,10 @@ import React from 'react';
 import { Quote, Star } from 'lucide-react';
 
 export const TestimonialCard = ({ testimonial }) => (
-  <div className="w-[300px] md:w-[450px] flex-shrink-0 p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-[#FF6A00]/50 hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-xl group relative overflow-hidden">
+  <div className="w-[300px] md:w-[450px] flex-shrink-0 p-6 md:p-8 rounded-3xl bg-[#0a0a0a] border border-white/[0.05] hover:border-[#FF6A00]/50 hover:bg-[#111111] transition-all duration-500 group relative overflow-hidden">
     
     {/* Efeito Glow Laranja Interno no Hover */}
-    <div className="absolute -top-[100px] -right-[100px] w-[200px] h-[200px] bg-[#FF6A00]/0 group-hover:bg-[#FF6A00]/20 blur-[80px] rounded-full transition-all duration-700 pointer-events-none" />
+    <div className="absolute -top-[100px] -right-[100px] w-[200px] h-[200px] bg-[#FF6A00]/0 group-hover:bg-[radial-gradient(circle,rgba(255,106,0,0.2)_0%,transparent_70%)] rounded-full transition-all duration-700 pointer-events-none" />
     
     {/* Aspas Gigantes Decorativas */}
     <Quote className="absolute top-6 right-6 w-12 h-12 md:w-16 md:h-16 text-white/[0.03] rotate-180 pointer-events-none group-hover:text-[#FF6A00]/10 transition-colors duration-500" />

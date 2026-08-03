@@ -7,7 +7,7 @@ export default function Marquee() {
       
       {/* Background Marquee (Levemente desfocada, movendo para a direita) */}
       <div className="absolute w-[130%] rotate-[6deg] z-0 translate-y-2">
-        <div className="bg-[#993b00] border-y border-[#ff6a00]/30 py-2 flex overflow-hidden whitespace-nowrap opacity-60 blur-[1px]">
+        <div className="bg-[#993b00] border-y border-[#ff6a00]/30 py-2 flex overflow-hidden whitespace-nowrap opacity-60">
           <div className="animate-marquee-right inline-block w-max text-lg md:text-xl font-bold text-white/60 tracking-wider uppercase">
             {textArray}
           </div>

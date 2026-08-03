@@ -37,7 +37,7 @@ const TestimonialSection = () => {
       </div>
 
       {/* Luz de Fundo Direita */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6A00]/5 blur-[150px] pointer-events-none rounded-full translate-x-1/3 -translate-y-1/3" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(255,106,0,0.05)_0%,transparent_60%)] pointer-events-none rounded-full translate-x-1/3 -translate-y-1/3" />
 
       <div className="max-w-[90rem] mx-auto px-6 relative z-10">
         

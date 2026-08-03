@@ -88,7 +88,7 @@ const SolutionSection = () => {
       </div>
 
       {/* Background Cinematográfico */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6A00]/10 blur-[200px] pointer-events-none rounded-full z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(255,106,0,0.1)_0%,transparent_60%)] pointer-events-none rounded-full z-0" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-t from-[#000000] to-transparent pointer-events-none z-0" />
 
       <div className="max-w-[90rem] mx-auto px-6 relative z-10 flex flex-col items-center">

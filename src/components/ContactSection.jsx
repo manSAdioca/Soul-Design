@@ -108,7 +108,7 @@ const ContactSection = () => {
       </div>
 
       {/* Background Cinematográfico - Glow Centralizado */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6A00]/5 blur-[250px] pointer-events-none rounded-full z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(255,106,0,0.05)_0%,transparent_60%)] pointer-events-none rounded-full z-0" />
 
       <div className="max-w-[80rem] mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -129,14 +129,14 @@ const ContactSection = () => {
 
           {/* Lado Direito: Formulário Glassmorphism Premium */}
           <div ref={rightRef} className="w-full opacity-0">
-            <div className="w-full rounded-[2rem] p-8 md:p-12 bg-gradient-to-b from-[#0a0a0a] to-[#050505] border border-white/[0.08] backdrop-blur-3xl shadow-[0_0_80px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.1)] relative overflow-hidden group">
+            <div className="w-full rounded-[2rem] p-8 md:p-12 bg-gradient-to-b from-[#0a0a0a] to-[#050505] border border-white/[0.08] shadow-[0_0_80px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.1)] relative overflow-hidden group">
               
               {/* Efeito Glow Laranja Interno na borda */}
-              <div className="absolute -top-[150px] -right-[150px] w-[400px] h-[400px] bg-[#FF6A00]/15 blur-[120px] rounded-full pointer-events-none transition-all duration-1000 group-hover:bg-[#FF6A00]/25" />
+              <div className="absolute -top-[150px] -right-[150px] w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(255,106,0,0.15)_0%,transparent_60%)] rounded-full pointer-events-none transition-all duration-1000 group-hover:bg-[radial-gradient(circle,rgba(255,106,0,0.25)_0%,transparent_60%)]" />
 
               {status === 'success' ? (
                 <div className="relative z-10 flex flex-col items-center text-center animate-[fade-in_0.5s_ease-out] py-8">
-                  <span className="inline-flex items-center gap-2 text-[#FF6A00] font-bold tracking-[0.2em] uppercase text-xs mb-8 px-5 py-2 rounded-full border border-[#FF6A00]/20 bg-[#FF6A00]/5 backdrop-blur-sm">
+                  <span className="inline-flex items-center gap-2 text-[#FF6A00] font-bold tracking-[0.2em] uppercase text-xs mb-8 px-5 py-2 rounded-full border border-[#FF6A00]/20 bg-[#FF6A00]/5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#FF6A00] animate-pulse"></span>
                     Solicitação recebida com sucesso
                   </span>
