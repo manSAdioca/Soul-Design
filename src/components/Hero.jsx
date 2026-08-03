@@ -294,12 +294,12 @@ export default function Hero() {
                   <img 
                     src="/assets/Sun & SAL DOBRA 2.webp" 
                     alt="Criação de Loja Virtual de Alta Conversão"
-                    className={`absolute inset-0 w-full h-full object-contain object-top bg-black transition-opacity duration-700 ${isNotebookClicked ? 'opacity-0' : 'opacity-100'}`}
+                    className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${isNotebookClicked ? 'opacity-0' : 'opacity-100'}`}
                   />
                   <img 
                     src="/assets/Sun e sal 2 dobra 2.webp" 
                     alt="Design Premium de E-commerce"
-                    className={`absolute inset-0 w-full h-full object-contain object-top bg-black transition-opacity duration-700 ${isNotebookClicked ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${isNotebookClicked ? 'opacity-100' : 'opacity-0'}`}
                   />
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function Hero() {
                   <img 
                     src="/assets/Drink Voro dobra 2.webp" 
                     alt="Site Mobile First Focado em Conversão"
-                    className="absolute inset-0 w-full h-full object-contain object-top bg-black"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
                   />
                 </div>
               </div>

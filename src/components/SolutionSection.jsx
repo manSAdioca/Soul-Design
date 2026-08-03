@@ -19,7 +19,7 @@ const LaptopMockup = ({ imageSrc, title, description }) => (
               loading="lazy"
               src={imageSrc} 
               alt={title} 
-              className="absolute inset-0 w-full h-full object-contain object-top bg-black"
+              className="absolute inset-0 w-full h-full object-cover object-top"
             />
             {/* Glare on Hover */}
             <div className="absolute top-0 left-[-100%] w-[150%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-[30deg] pointer-events-none z-30 opacity-0 group-hover:opacity-100 group-hover:animate-[shine_1.5s_ease-in-out]" />
@@ -185,7 +185,7 @@ const SolutionSection = () => {
                         key={`${project.id}-${i}`}
                         src={project.desktop} 
                         alt={project.name} 
-                        className={`absolute inset-0 w-full h-full object-contain object-top bg-black transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-[1.03] pointer-events-none z-0'}`}
+                        className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-[1.03] pointer-events-none z-0'}`}
                       />
                     ))}
                     
