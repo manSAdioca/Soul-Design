@@ -105,7 +105,7 @@ const SolutionSection = () => {
         <div className="w-full relative perspective-1000 flex justify-center mt-8">
           
           {/* Container Externo para Entrada (Slide In) */}
-          <div ref={laptopEnterRef} className="w-full max-w-[1100px] z-40 relative" style={{ transformStyle: 'preserve-3d' }}>
+          <div ref={laptopEnterRef} className="w-full max-w-[1300px] 2xl:max-w-[1400px] z-40 relative px-0" style={{ transformStyle: 'preserve-3d' }}>
             
             {/* Container Interno para Flutuação (Zero Gravity) */}
             <div 
@@ -117,8 +117,8 @@ const SolutionSection = () => {
               <div className="absolute top-1.5 md:top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-black border border-[#333] z-50" />
               
               {/* Tela do Laptop */}
-              <div className="w-full h-full pt-5 md:pt-6 bg-[#050505]">
-                <div className="w-full aspect-[16/9] bg-[#050505] relative overflow-hidden border-b border-[#222]">
+              <div className="w-full h-full pt-4 md:pt-6 bg-[#050505]">
+                <div className="w-full aspect-[16/10] md:aspect-[16/9] bg-[#050505] relative overflow-hidden border-b border-[#222]">
                   
                   {/* Imagens do Carrossel */}
                   {projects.map((project, i) => (
@@ -127,7 +127,7 @@ const SolutionSection = () => {
                       key={`${project.id}-${i}`}
                       src={project.desktop} 
                       alt={project.name} 
-                      className={`absolute inset-0 w-full h-full object-cover object-left-top transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'}`}
+                      className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'}`}
                     />
                   ))}
                   
