@@ -205,7 +205,7 @@ export default function Hero() {
             ref={subheadRef}
             className="text-lg sm:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-[90%] lg:max-w-none tracking-wide"
           >
-            Como uma <strong className="text-white font-medium">empresa de marketing</strong> e design premium, fortalecemos sua marca, transmitimos confiança e geramos novas oportunidades para o seu negócio.
+            Muito além de uma <strong className="text-white font-medium">empresa de marketing</strong>. Criamos sites que fortalecem sua marca, transmitem autoridade e geram vendas diárias.
           </h2>
           
           <div ref={ctaRef} className="flex flex-col items-center lg:items-start gap-4 mb-14 w-full sm:w-auto relative">
