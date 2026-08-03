@@ -22,7 +22,7 @@ export default function SalesChartWidget({ className }) {
   }, []);
 
   return (
-    <div className={`flex flex-col bg-[#050505] border border-white/10 rounded-2xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-[320px] ${className}`}>
+    <div className={`flex flex-col bg-[#050505] border border-white/10 rounded-2xl p-5 shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-[400px] mx-auto ${className}`}>
       
       {/* Header do Widget */}
       <div className="flex justify-between items-center mb-6">
