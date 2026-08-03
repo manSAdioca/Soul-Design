@@ -207,8 +207,8 @@ export default function Hero() {
         className="absolute inset-0 z-[3] pointer-events-none mix-blend-screen"
       />
 
-      {/* Camada 4.5: Cenário Gigante Distribuidoras (Full Bleed Right) */}
-      {currentNiche === 'distribuidoras' && (
+      {/* Camada 4.5: Cenário Gigante de Fundo (Full Bleed Right) */}
+      {nicheData.heroImage && currentNiche !== 'default' && (
         <div className="absolute inset-y-0 right-0 w-[100vw] md:w-[65vw] z-[4] pointer-events-none overflow-hidden">
           <div 
             className="absolute inset-0"
