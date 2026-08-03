@@ -220,8 +220,8 @@ export default function Hero() {
             }}
           >
             <img 
-              src="/assets/hero-distribuidora.png" 
-              alt="Dor do Distribuidor"
+              src={nicheData.heroImage} 
+              alt="Dor do Cliente"
               className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
             />
             

@@ -4,6 +4,7 @@ export const niches = {
     seoDescription: "Sites que funcionam como verdadeiras máquinas de conversão.",
     
     // Hero Section
+    heroImage: "/assets/hero-distribuidora.png", // fallback or default image
     heroTitleLines: [
       "Seu concorrente conquista clientes",
       "antes mesmo de falar com eles."
@@ -82,6 +83,7 @@ export const niches = {
     seoDescription: "Criação de catálogos e sites B2B de alta performance para adegas e distribuidoras de bebidas.",
     
     // Hero Section
+    heroImage: "/assets/hero-distribuidora.png",
     heroTitleLines: [
       "Sua distribuidora de bebidas perde pedidos",
       "por depender só do WhatsApp."
@@ -168,13 +170,14 @@ export const niches = {
     seoDescription: "Sites premium para corretores de imóveis e imobiliárias que desejam captar leads qualificados e vender imóveis de luxo.",
     
     // Hero Section
+    heroImage: "/assets/hero-corretores.png",
     heroTitleLines: [
-      "Você perde comissões altas",
-      "porque seu site parece barato."
+      "Cansado de depender de listas de leads frios",
+      "e portais que engolem sua comissão?"
     ],
-    heroHighlight: "Eleve seu posicionamento.",
-    heroSubhead: "Pare de disputar atenção no Zap Imóveis. Tenha um site premium que transmite autoridade imediata e capta leads qualificados para imóveis de alto padrão.",
-    heroButton: "Quero atrair clientes premium",
+    heroHighlight: "Capture os seus.",
+    heroSubhead: "Tenha um site de alto padrão que transmite autoridade imediata e capta leads qualificados diretamente para o seu WhatsApp.",
+    heroButton: "Quero captar leads exclusivos",
 
     // Problem Section
     problemsTitle: "Por que os melhores clientes compram com outro corretor?",
