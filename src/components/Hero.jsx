@@ -108,11 +108,10 @@ export default function Hero() {
       const ctxGsap = gsap.context(() => {
         const tl = gsap.timeline();
 
-        // Setup inicial (esconder e desfocar)
+        // Setup inicial (esconder)
         gsap.set([subheadRef.current, ctaRef.current, rightColRef.current], {
           y: 20,
-          opacity: 0,
-          filter: "blur(5px)"
+          opacity: 0
         });
         
         if (benefitsRef.current) {
@@ -124,20 +123,20 @@ export default function Hero() {
 
         // Split headline text manually for word-by-word animation
         const words = headlineRef.current.querySelectorAll('.word');
-        gsap.set(words, { y: 30, opacity: 0, rotateX: 40, scale: 1.15, filter: "blur(15px)" });
+        gsap.set(words, { y: 30, opacity: 0, rotateX: 40, scale: 1.15 });
 
-        // Sequência de entrada com Blur Cinematográfico (Efeito 3D Pop)
+        // Sequência de entrada (Efeito 3D Pop sem blur para salvar CPU)
         tl.to(words, {
-          y: 0, opacity: 1, rotateX: 0, scale: 1, filter: "blur(0px)", duration: 1.2, stagger: 0.05, ease: 'back.out(1.4)'
+          y: 0, opacity: 1, rotateX: 0, scale: 1, duration: 1.2, stagger: 0.05, ease: 'back.out(1.4)'
         })
         .to(subheadRef.current, {
-          y: 0, opacity: 1, filter: "blur(0px)", duration: 1, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 1, ease: 'power3.out'
         }, "-=0.8")
         .to(ctaRef.current, {
-          y: 0, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
         }, "-=0.7")
         .to(rightColRef.current, {
-          y: 0, opacity: 1, filter: "blur(0px)", duration: 1.2, ease: 'power2.out'
+          y: 0, opacity: 1, duration: 1.2, ease: 'power2.out'
         }, "-=1.2");
 
         // Glow respirando lentamente (Loop) - efeito de fumaça iluminada
@@ -190,10 +189,10 @@ export default function Hero() {
       {/* Fumaça sutil no fundo */}
       <div className="absolute inset-0 z-[1] opacity-20 pointer-events-none" style={{ background: 'radial-gradient(circle at 30% 40%, rgba(255,106,0,0.1) 0%, transparent 60%)' }} />
 
-      {/* Camada 3: Glow Radial (Iluminação de Fogo) */}
+      {/* Camada 3: Glow Radial (Iluminação de Fogo - Sem Filtro Blur para Performance) */}
       <div className="absolute inset-0 z-[2] overflow-hidden pointer-events-none flex justify-center items-center">
-        <div className="ambient-glow absolute top-1/4 left-1/4 w-[50vw] h-[50vw] rounded-full bg-[#FF3200]/15 blur-[120px] mix-blend-screen" />
-        <div className="ambient-glow absolute bottom-1/4 right-1/4 w-[60vw] h-[60vw] rounded-full bg-[#FF6A00]/10 blur-[150px] mix-blend-screen" />
+        <div className="ambient-glow absolute top-1/4 left-1/4 w-[50vw] h-[50vw] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,50,0,0.15) 0%, transparent 70%)' }} />
+        <div className="ambient-glow absolute bottom-1/4 right-1/4 w-[60vw] h-[60vw] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,106,0,0.1) 0%, transparent 70%)' }} />
       </div>
 
       {/* Camada 4: Canvas Partículas */}
