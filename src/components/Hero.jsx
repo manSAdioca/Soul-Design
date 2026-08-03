@@ -134,9 +134,6 @@ export default function Hero() {
         .to(ctaRef.current, {
           y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
         }, "-=0.6")
-        .to(benefitsRef.current.children, {
-          y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out'
-        }, "-=0.5")
         .to(rightColRef.current, {
           y: 0, opacity: 1, duration: 1.2, ease: 'power2.out'
         }, "-=1.5");
