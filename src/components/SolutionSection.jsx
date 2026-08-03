@@ -19,7 +19,7 @@ const LaptopMockup = ({ imageSrc, title, description }) => (
               loading="lazy"
               src={imageSrc} 
               alt={title} 
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain object-center bg-[#050505]"
             />
             {/* Glare on Hover */}
             <div className="absolute top-0 left-[-100%] w-[150%] h-[200%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-[30deg] pointer-events-none z-30 opacity-0 group-hover:opacity-100 group-hover:animate-[shine_1.5s_ease-in-out]" />
