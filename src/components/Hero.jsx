@@ -290,7 +290,9 @@ export default function Hero() {
                     Interagir
                   </span>
                 </div>
-                <div className="relative h-[400px] w-full bg-[#030303] overflow-hidden">
+                <div className="relative w-full bg-[#030303] overflow-hidden">
+                  {/* Imagem invisível para ditar a altura exata sem cortes */}
+                  <img src="/assets/Sun & SAL DOBRA 2.webp" className="w-full h-auto opacity-0 pointer-events-none" alt="" />
                   <img 
                     src="/assets/Sun & SAL DOBRA 2.webp" 
                     alt="Criação de Loja Virtual de Alta Conversão"

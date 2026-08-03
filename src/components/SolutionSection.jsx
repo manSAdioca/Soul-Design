@@ -14,7 +14,9 @@ const LaptopMockup = ({ imageSrc, title, description }) => (
         
         {/* Tela do Laptop */}
         <div className="w-full h-full pt-4 md:pt-6 bg-[#050505] rounded-t-xl overflow-hidden">
-          <div className="w-full aspect-[2/1] bg-[#050505] relative overflow-hidden border-b border-[#222]">
+          <div className="w-full bg-[#050505] relative overflow-hidden border-b border-[#222]">
+            {/* Imagem invisível para ditar a altura exata do container sem cortes */}
+            <img src={imageSrc} className="w-full h-auto opacity-0 pointer-events-none" alt="" />
             <img 
               loading="lazy"
               src={imageSrc} 
@@ -176,8 +178,13 @@ const SolutionSection = () => {
                 
                 {/* Tela do Laptop */}
                 <div className="w-full h-full pt-4 md:pt-6 bg-[#050505] rounded-t-xl overflow-hidden">
-                  <div className="w-full aspect-video bg-[#050505] relative overflow-hidden border-b border-[#222]">
+                  <div className="w-full bg-[#050505] relative overflow-hidden border-b border-[#222]">
                     
+                    {/* Imagem invisível para forçar a proporção exata sem cortes e sem bordas */}
+                    {activeProjects.length > 0 && (
+                      <img src={activeProjects[0].desktop} className="w-full h-auto opacity-0 pointer-events-none" alt="" />
+                    )}
+
                     {/* Imagens do Carrossel */}
                     {activeProjects.map((project, i) => (
                       <img 
