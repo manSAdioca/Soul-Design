@@ -117,8 +117,8 @@ const SolutionSection = () => {
               <div className="absolute top-1.5 md:top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-black border border-[#333] z-50" />
               
               {/* Tela do Laptop */}
-              <div className="w-full h-full pt-4 md:pt-6 bg-[#050505]">
-                <div className="w-full aspect-[16/10] md:aspect-[16/9] bg-[#050505] relative overflow-hidden border-b border-[#222]">
+              <div className="w-full h-full pt-4 md:pt-6 bg-[#050505] rounded-t-xl overflow-hidden">
+                <div className="w-full bg-[#050505] relative overflow-hidden border-b border-[#222]">
                   
                   {/* Imagens do Carrossel */}
                   {projects.map((project, i) => (
@@ -127,7 +127,7 @@ const SolutionSection = () => {
                       key={`${project.id}-${i}`}
                       src={project.desktop} 
                       alt={project.name} 
-                      className={`absolute inset-0 w-full h-full object-contain object-center transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100' : 'opacity-0 scale-[1.03] pointer-events-none'}`}
+                      className={`${i === 0 ? 'relative w-full h-auto block' : 'absolute inset-0 w-full h-full object-fill'} transition-all duration-[1200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${current === i ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-[1.03] pointer-events-none z-0'}`}
                     />
                   ))}
                   
