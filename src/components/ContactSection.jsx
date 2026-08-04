@@ -47,7 +47,7 @@ const ContactSection = ({ niche = 'default' }) => {
       console.error('Falha ao enviar e-mail...', err);
     });
     
-    const text = `Olá! Acabei de preencher o formulário no site e gostaria de iniciar meu atendimento. (Origem: ${niche})${utms}`;
+    const text = `Olá! Acabei de preencher o formulário no site e gostaria de iniciar meu atendimento. (Origem: ${niche})`;
     const link = `https://wa.me/5547992419566?text=${encodeURIComponent(text)}`;
     setWhatsappLink(link);
     
