@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Check, Mail, MessageSquare, Phone, User, Lock } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { trackConversion } from '@/utils/analytics';
+import { getFormattedUTMs } from '@/utils/utm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,8 @@ const ContactSection = ({ niche = 'default' }) => {
     const email = formData.get('email');
     const phone = formData.get('phone');
     
+    const utms = getFormattedUTMs();
+
     // Disparo Silencioso de E-mail via EmailJS
     emailjs.send(
       'service_t3jobhh', // Service ID
@@ -35,7 +38,7 @@ const ContactSection = ({ niche = 'default' }) => {
         name: name,
         phone: phone,
         email: email,
-        origem: niche,
+        origem: niche + utms,
       },
       'af8fsz3hVjcJCBrSJ' // Public Key
     ).then((response) => {
@@ -44,7 +47,7 @@ const ContactSection = ({ niche = 'default' }) => {
       console.error('Falha ao enviar e-mail...', err);
     });
     
-    const text = `Olá! Acabei de preencher o formulário no site e gostaria de iniciar meu atendimento. (Origem: ${niche})`;
+    const text = `Olá! Acabei de preencher o formulário no site e gostaria de iniciar meu atendimento. (Origem: ${niche})${utms}`;
     const link = `https://wa.me/5547992419566?text=${encodeURIComponent(text)}`;
     setWhatsappLink(link);
     
